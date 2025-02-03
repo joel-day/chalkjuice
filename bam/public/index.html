@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--The <head> should only contain metadata, links to external resources (e.g., stylesheets or scripts), and inline scripts or styles. -->
+    <!--Putting actual content (like a loader's HTML) in the <head> is considered bad practice because that section is not rendered as part of the visual structure.-->
+    <head>
+        <!-- Metas -->
+        <title>ChalkJuice</title>
+        <link rel="icon" href="images/logo_main_color.png" type="image/png" />
+        <meta name="author" content="ChalkJuice LLC">
+        <meta name="keywords" content="ChalkJuice, Chalk, Juice, Sports, Stats, 
+            Statistics, Players, Teams, AI, Forecasting, Artifical Intelliegence, Machine Learning">
+        <meta name="description" content="ChalkJuice makes AI tools accessable to sports fans."> 
+        <!-- Controls how much referrer information (like the URL) is sent when navigating to another page or resource-->
+        <meta name="referrer" content="no-referrer">
+        <!-- Ensures that the page scales correctly on different screen sizes, such as mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">    <!--restricts zoom, maximum-scale=1">-->
+        <!--Ensures that most characters, including special symbols and non-English text, are displayed correctly-->
+        <meta charset="UTF-8">
+        <!-- Ensures consistant page rendering for old versions of IE-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- CSS files-->
+        <!-- someone else's work-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Bodoni+Moda:ital,wght@0,400;1,500&family=Poetsen+One&display=swap" rel="stylesheet">
+        <!-- Bootstrap-->
+        <!--files load in cascading order. use boostrap as default and then customize with custom scipts after-->
+        <!-- you can also use jsDelivr and avoid loading locally-->
+        <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+        <!-- the .min.css version of the file is a compressed, minified version of the full bootstrap.css-->
+        <link rel="stylesheet" href="css/bootstrap_chalk.css">
+        <!--CUSTOM code-->
+        <!-- i.e. not a part of Bootstrap, most responsive design needs are already covered by Bootstrap's default features-->
+        <link rel="stylesheet" href="css/responsive_chalk.css">
+        <link rel="stylesheet" href="css/style_chalk_dev.css">
+
+        <!-- Security -->
+        <!-- (CSP) Content-Security Policy. Protect the page from XSS (Cross-Site Scripting) and Data Injectio attacks-->
+        <!-- src or 'source' specifies where the browser is allowed to load resources from for that specific type of content-->
+        <!--frame-ancestors 'none'; protects against click-jacking and eliminates the need for "X-Frame-Options"-->
+        <!--https://fonts.googleapis.com: Allows loading the font CSS from Google Fonts. https://fonts.gstatic.com: Allows loading the actual font files from Google Fonts.-->
+        <meta http-equiv="Content-Security-Policy" content="
+            default-src 'self' https://04hc2ltc67.execute-api.us-east-2.amazonaws.com;
+            script-src 'self' http://localhost:3003 https://04hc2ltc67.execute-api.us-east-2.amazonaws.com;
+            connect-src 'self' https://04hc2ltc67.execute-api.us-east-2.amazonaws.com;
+            object-src 'self' https://04hc2ltc67.execute-api.us-east-2.amazonaws.com;
+            style-src 'self' 'unsafe-inline' https://04hc2ltc67.execute-api.us-east-2.amazonaws.com https://netdna.bootstrapcdn.com https://fonts.googleapis.com;
+            font-src 'self' https://04hc2ltc67.execute-api.us-east-2.amazonaws.com https://fonts.googleapis.com https://fonts.gstatic.com https://netdna.bootstrapcdn.com;
+            img-src 'self' https://04hc2ltc67.execute-api.us-east-2.amazonaws.com;
+            "> 
+        <!-- Forces browsers to communicate with your site only over HTTPS-->
+        <meta http-equiv="Strict-Transport-Security" content="max-age=315360000;includeSubDomains">
+    </head>
+    <body>
+
+        
+        <!-- Loader  -->
+        <div class="loader_bg">
+            <div class = "centered">
+                <div class = "blob-1"></div>
+                <div class = "blob-2"></div>
+            </div>
+
+            <!--<div class="loader"><img src="images/logo_plain.png" alt="ChalkJuice"/></div> -->
+        </div>
+
+        <!-- Container -->
+        <div class="container-fluid">
+
+            <!-- Top Tan Banner -->
+            <div class="row_top_banner">
+                <div class="col-md-12">
+                </div>
+            </div>
+
+            <div class="row row_menu">
+                <div class="col-md-4">
+                </div>
+                <!-- First Column (Menu) -->
+                <div class="col-md-4">
+                    <div class="blocks_menu">
+                        <a href="ChalkJuice.html"><img src="images/Logo_plain.png" alt="Logo" /></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                </div>
+            </div>
+
+            
+            
+            <div class="row row_body">
+                <!-- First Column (EMPTY) -->
+                <div class="col-md-1">
+                </div>
+
+                <!-- Second Column -->
+                <div class="col-md-3">
+                    <div class="blocks" style="height: 300px;">
+                        <div class="table-wrapper">
+                            <div class="table_tan">
+                                <table id="data-table">
+                                    <thead></thead><tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blocks" style="height: 200px;">
+                        <div class="table-wrapper">
+                            <div class="table_tan">
+                                <table id="data-table2">
+                                    <thead></thead><tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Third Column -->
+                <div class="col-md-2">
+                    <div class="blocks" style="height: 200px;">
+                        <div class="table-wrapper">
+                            <div class="table_tan">
+                                <table id="data-table3">
+                                    <thead></thead><tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blocks" style="height: 800px;">
+                        <div class="table-wrapper">
+                            <div class="table_tan" >
+                                <table id="data-table4">
+                                    <thead></thead><tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fourth Column -->
+                <div class="col-md-5">
+                    <div class="blocks" style="height: 800px;">
+                        <div class="table-wrapper">
+                            <div class="table_tan">
+                                <table id="data-table5">
+                                    <thead></thead><tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blocks" style="height: 300px;">
+                        <div class="table-wrapper">
+                            <div class="table_tan">
+                                <table id="data-table6">
+                                    <thead></thead><tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>      
+                <!-- Fifth Column (EMPTY)-->
+                <div class="col-md-1">
+                </div>
+
+            </div>
+
+
+            <div class="row_bottom">
+                <div class="col-md-12">
+                </div>
+            </div>
+
+        </div>
+        
+        </div>
+        <!-- Javascript files-->
+        <script src="js/app.js"></script>
+
+
+    </body>
+
+</html>
+
+
+<!-- 
+<table>
+    <tr><th>Company</th><th>Contact</th><th>Country</th></tr>
+    <tr><td>Alfreds Futterkiste</td><td>Maria Anders</td><td>Germany</td></tr>
+    <tr><td>Centro comercial Moctezuma</td><td>Francisco Chang</td><td>Mexico</td></tr>
+</table>
+-->
+
+
