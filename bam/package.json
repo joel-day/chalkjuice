@@ -11,8 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "-": "^0.0.1",
     "express": "^4.21.2",
-    "node-fetch": "^3.3.2"
+    "node-fetch": "^3.3.2",
+    "save-dev": "^0.0.1-security"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
