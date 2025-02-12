@@ -1,6 +1,145 @@
 /*---------------------------------------------------------------------
     File Name: chalk_custom.js
 ---------------------------------------------------------------------*/
+  // Storage for incoming data
+let tableHeadersa = [];
+let tableDataa = [];
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const socket = new WebSocket("wss://0t9yhsvorj.execute-api.us-east-2.amazonaws.com/production/");
+
+  // When WebSocket connection is established
+  socket.onopen = function (event) {
+      console.log("✅ WebSocket is connected!");
+      
+    
+  };
+  // WebSocket event handlers
+  socket.onmessage = function (event) {
+    console.log("📩 Message received from WebSocket:", event.data);
+
+    try {
+      const jsonData = JSON.parse(event.data);
+      console.log("🔍 Parsed JSON:", jsonData);
+
+      if (jsonData.label === "headers") {
+        updateTableHeaders(jsonData.data);
+      } else if (jsonData.label === "chunk") {
+        appendRowsToTable(jsonData.data);
+      }
+    } catch (error) {
+      console.error("❌ Failed to parse JSON:", error);
+    }
+  };
+
+  socket.onclose = function (event) {
+    console.log("❌ WebSocket closed:", event);
+  };
+
+  socket.onerror = function (error) {
+    console.error("🚨 WebSocket error:", error);
+  };
+});
+  
+// ** Function to update table headers **
+function updateTableHeaders(headers) {
+  const table = document.getElementById("data-table5");
+  if (!table) return;
+
+  const tableHeader = table.querySelector("thead");
+  tableHeader.innerHTML = "";
+
+  const headerRow = document.createElement("tr");
+  headers.forEach(header => {
+    const th = document.createElement("th");
+    th.textContent = header;
+    headerRow.appendChild(th);
+  });
+  tableHeader.appendChild(headerRow);
+}
+
+// ** Function to append rows to table without storing in memory **
+function appendRowsToTable(rows) {
+  const table = document.getElementById("data-table5");
+  if (!table) return;
+
+  const tableBody = table.querySelector("tbody");
+
+  rows.forEach(row => {
+    const tr = document.createElement("tr");
+    row.forEach(cell => {
+      const td = document.createElement("td");
+      td.textContent = cell;
+      tr.appendChild(td);
+    });
+    tableBody.appendChild(tr);
+  });
+
+  console.log(`✅ ${rows.length} rows added to the table.`);
+}
+  
+
+// Reusable function to populate a table
+async function populateTable_noapi(tableId) {
+  const table = document.getElementById(tableId);
+  const tableHeader = table.querySelector("thead");
+  const tableBody = table.querySelector("tbody");
+
+  try {
+      
+      // Waits for the response body to be read and converted to a JSON object.
+      const data = await response.json();
+
+      // Populate headers
+      const headers = Object.keys(data[0]);
+      headers.forEach(header => {
+          const th = document.createElement("th");
+          th.textContent = header;
+          tableHeader.appendChild(th);
+      });
+
+      // Populate rows
+      data.forEach(row => {
+          const tr = document.createElement("tr");
+          headers.forEach(header => {
+              const td = document.createElement("td");
+              td.textContent = row[header];
+              tr.appendChild(td);
+          });
+          tableBody.appendChild(tr);
+      });
+  } catch (error) {
+      console.error("Error loading table data:", error);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Reusable function to populate a table
 async function populateTable(tableId, apiurl) {
   const table = document.getElementById(tableId);
@@ -41,10 +180,6 @@ async function populateTable(tableId, apiurl) {
 }
 
 
-
-
-
-
 // 1) HTML begins loading.
 // 2) HTML finishes loading and DOM is built → DOMContentLoaded fires.
 // 3) CSS, JavaScript, and images continue loading.
@@ -68,8 +203,8 @@ document.querySelector('html').classList.add('no-scroll');
 document.addEventListener("DOMContentLoaded", async () => {
   const apiurl = "https://04hc2ltc67.execute-api.us-east-2.amazonaws.com/dosbowl";
   const tableIds = [
-    "data-table", "data-table2", "data-table3", "data-table4", "data-table5",
-    "data-table6"
+    // "data-table", "data-table2", "data-table3", "data-table4", "data-table6",
+    "data-table"
   ];
 
   // Populate all tables
