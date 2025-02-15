@@ -222,6 +222,7 @@ table {
   color: #212529;
   border-collapse: collapse;
   border-radius: 6px 6px 6px 6px; /* Rounded corners for the box */
+  table-layout: auto; /* Allows column width to adjust to content */
 }
 
 .table_tan {
@@ -315,7 +316,10 @@ tbody tr:hover {
 }
 
 
-
+th {
+  min-width: max-content; /* Makes sure column width is at least the length of the header text */
+  white-space: nowrap;
+}
 
 
 
