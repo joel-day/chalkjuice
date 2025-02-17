@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             // Send a query request to the WebSocket API
       const message = {
         action: "fetch_gold",  // WebSocket route name
-        query: 'SELECT * FROM chalkjuice_data WHERE season = 2023;'
+        query: "SELECT * FROM chalkjuice_data WHERE season = 2023 AND team = 'DET';"
       };
 
       socket.send(JSON.stringify(message));
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           document.querySelector('.loader_bg').style.display = 'none';
           document.querySelector('html').classList.remove('no-scroll');
           console.log("🚀 Last chunk loaded. Loader hidden.");
-        }, 100);
+        }, 1);
       }
     } catch (error) {
       console.log("⚠️ Received non-JSON message:", event.data);
