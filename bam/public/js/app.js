@@ -12,6 +12,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   socket.onopen = function (event) {
       console.log("✅ WebSocket is connected!");
       
+            // Send a query request to the WebSocket API
+      const message = {
+        action: "fetch_gold",  // WebSocket route name
+        query: 'SELECT * FROM chalkjuice_data WHERE season = 2023;'
+      };
+
+      ws.send(JSON.stringify(message));
     
   };
   // WebSocket event handlers
