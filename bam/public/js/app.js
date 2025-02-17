@@ -24,6 +24,8 @@ document.querySelector('html').classList.add('no-scroll');
 let tableHeadersa = [];
 let tableDataa = [];
 
+const socket = new WebSocket("wss://0t9yhsvorj.execute-api.us-east-2.amazonaws.com/production/");
+
 document.addEventListener("DOMContentLoaded", async () => {
   const socket = new WebSocket("wss://0t9yhsvorj.execute-api.us-east-2.amazonaws.com/production/");
 
@@ -34,12 +36,58 @@ document.addEventListener("DOMContentLoaded", async () => {
             // Send a query request to the WebSocket API
       const message = {
         action: "fetch_gold",  // WebSocket route name
-        query: "SELECT * FROM chalkjuice_data WHERE season = 2023 AND team = 'DET';"
+        query: "SELECT * FROM chalkjuice_data WHERE season = 2023;"
       };
 
       socket.send(JSON.stringify(message));
     
   };
+  // Function to clear only the table body (keeps headers intact)
+  function clearTable() {
+    const table = document.getElementById("data-table5");
+    if (!table) return;
+
+    const tableBody = table.querySelector("tbody");
+    if (tableBody) {
+        tableBody.innerHTML = ""; // Clears only the data rows
+    }
+  }
+
+  // Function to send a query with the selected year and team
+  function sendQuery(selectedYear, selectedTeam) {
+    clearTable(); // Clear the table before sending the new request
+
+    let query = `SELECT * FROM chalkjuice_data WHERE season = ${selectedYear}`;
+    
+    // If a specific team is selected, add the team filter to the query
+    if (selectedTeam !== "ALL") {
+      query += ` AND team = '${selectedTeam}'`;
+    }
+
+    if (socket.readyState === WebSocket.OPEN) {
+      const message = {
+        action: "fetch_gold",  // WebSocket route name
+        query: query
+      };
+
+      socket.send(JSON.stringify(message));
+      console.log(`📤 Sent query: ${query}`);
+    } else {
+      console.warn("⚠️ WebSocket is not open. Cannot send message.");
+    }
+  }
+
+  // Event listeners for dropdown changes
+  document.getElementById("year-select").addEventListener("change", function () {
+    sendQuery(this.value, document.getElementById("team-select").value);
+  });
+
+  document.getElementById("team-select").addEventListener("change", function () {
+    sendQuery(document.getElementById("year-select").value, this.value);
+  });
+
+
+
   // WebSocket event handlers
   socket.onmessage = function (event) {
     console.log("📩 Message received from WebSocket:", event.data);
@@ -119,6 +167,25 @@ function appendRowsToTable(rows) {
 
 
 
+// Reference the dropdown
+const yearSelect = document.getElementById("year-select");
+
+// Function to send WebSocket request with selected year
+function sendQuery(selectedYear) {
+    const message = {
+        action: "fetch_gold",  // WebSocket route name
+        query: `SELECT * FROM chalkjuice_data WHERE season = ${selectedYear};`
+    };
+
+    // Send the message through the WebSocket
+    socket.send(JSON.stringify(message));
+}
+
+// Event listener for dropdown change
+yearSelect.addEventListener("change", function () {
+    const selectedYear = this.value;
+    sendQuery(selectedYear);
+});
 
 
 

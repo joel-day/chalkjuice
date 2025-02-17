@@ -187,38 +187,145 @@ html::-webkit-scrollbar-thumb {
 .blocks {
   background-color: #dfc8aa;
   color: #000000;
-  border-radius: 16px; /* Rounded edges */
-
-  
-  /*border: 2px solid black;*/
-  display: flex;             /* Makes it a flex container */
-  justify-content: center;   /* Centers horizontally */
-  align-items: center;   
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column; /* Stack table properly */
+  justify-content: flex-start;
+  align-items: center;
   box-sizing: border-box;
-
-  /* distance between boxes vertically*/
-  margin-bottom: 5px;
-  margin-top: 5px;
-
   padding: 10px;
+  margin-top: 5px;
 }
 .blocks img {
   width: 100%; /* Logo width adjusts to screen size */
 }
+
+/*---------------------------------------------------------------- Block features (Table titles,  Dropdown menus, Input boxes) area ---------------------------------------------------------------------*/
+
+/* Header Container */
+.header-container {
+  display: flex;
+  justify-content: space-between; /* Space title and dropdowns */
+  align-items: center; /* Ensures vertical centering */
+  width: 90%;
+  
+  background-color: #dfc8aa;
+  border-radius: 10px; /* Rounded corners */
+  margin-bottom: 6px;
+
+  padding: 0px; /* Added padding for consistent spacing */
+}
+
+/* Title Styling */
+.title_table {
+  display: flex;
+  align-items: center; /* Centers text vertically */
+  justify-content: center; /* Centers text horizontally if needed */
+  font-size: 22px;
+  text-align: center;
+
+  font-weight: bold; /* Makes text bold */
+
+  background-color: #dfc8aa; /* White background */
+  border-radius: 6px; /* Rounded edges */
+
+  padding: 0.1rem;
+  color: #000; /* Text color */
+  height: 100%; /* Ensures title fills the container height */
+  margin: 0px;
+
+  text-transform: capitalize;
+}
+
+/* Dropdown Container */
+.dropdowns {
+  display: flex;
+  align-items: center; /* Centers dropdowns vertically */
+  justify-content: center; /* Centers text horizontally if needed */
+  font-size: 14px;
+  text-align: center;
+  padding: 0.3rem;
+  background-color: #dfc8aa; /* White background */
+  border-radius: 6px; /* Rounded edges */
+
+
+  gap: 6px;
+  color: #000; /* Text color */
+  height: 100%; /* Ensures title fills the container height */
+  margin: 0px;
+}
+
+/* Style for Dropdown Menus */
+.dropdowns select {
+  font-size: 14px;
+  text-align: center;
+  background-color: #dfc8aa; /* White background */
+  border: 1px solid #dfc8aa; /* Remove black border or customize it */
+  border-radius: 6px; /* Rounded edges */
+  appearance: none; /* Hides default browser styling */
+  padding: 0.1rem;
+  height: 100%; /* Set a fixed height to match the title */
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  line-height: 1; /* Ensures no extra space inside dropdowns */
+  font-weight: bold; /* Makes text bold */
+}
+
+
+/* Dropdown Hover & Focus Effect */
+.dropdowns select:hover,
+.dropdowns select:focus {
+  background-color: #ffffff; /* Background color on hover/focus */
+  border-color: #ffffff; 
+}
+
+/* Dropdown Options */
+.dropdowns select option {
+  background-color: #dfc8aa; /* Background color for options */
+  color: #000; /* Text color for options */
+  border: none;
+}
+
+/* Dropdown Option Hover Effect */
+.dropdowns select option:hover {
+  background-color: #000000 !important; /* Background color on hover (black) */
+  color: #ffffff !important; /* Text color on hover (white) */
+}
+
+/* Dropdown Scrollbar */
+.dropdowns select::-webkit-scrollbar {
+  width: 10px;
+}
+
+.dropdowns select::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #dfc8aa;
+  visibility: visible;
+}
+
+/* Dropdown Scrollbar Track */
+.dropdowns select::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+
+
 
 
 /*---------------------------------------------------------------- TABLE area ---------------------------------------------------------------------*/
 
 
 .table-wrapper {
-  background-color: #ffffff; /* White background for the box */
-  border-radius: 10px;         /* Rounded corners for the box */
+  background-color: #ffffff; /* White background */
+  border-radius: 10px; /* Rounded corners */
   width: 100%;
-  height: 100%;
-  display: flex;               /* Makes it a flex container */
-  justify-content: center;     /* Centers horizontally */
-  padding: 6px;                /* space between wrapper and table */ 
+  flex-grow: 1; /* Fills remaining space inside .blocks */
+  display: flex;
+  justify-content: center;
+  padding: 6px;
+  overflow: auto; /* Enables scrolling if needed */
 }
+
 
 table {
   width: 100%;
@@ -275,11 +382,15 @@ table, td {
   border-top: 0px solid #dee2e6;
   border-bottom: 0px solid #dee2e6;
   border-radius: 6px; /* Rounded corners for the box */
-  padding: 0.5rem;   /* Adds padding inside table cells. */
-  text-align: left;
+  padding: 0.2rem;   /* Adds padding inside table cells. */
+  text-align: center; /* Center text horizontally */
   vertical-align: top;
   margin: 0;  /* Remove any margin */
+  white-space: nowrap; /* Prevent text from wrapping */
 }
+
+
+
 
 /* Head */
 thead, th {
@@ -320,9 +431,10 @@ tbody tr:hover {
 }
 
 
-th {
-  min-width: max-content; /* Makes sure column width is at least the length of the header text */
-  white-space: nowrap;
+/* Adjust column width dynamically */
+td, th {
+  width: 1px; /* Ensures the column only expands as needed */
+  min-width: max-content; /* Minimum width based on content */
 }
 
 
