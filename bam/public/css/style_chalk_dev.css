@@ -125,7 +125,11 @@ html::-webkit-scrollbar-thumb {
 
   /* Vertically centers the boxes inside of the row */
   align-items: center; 
+
+  
 }
+
+
 
 .row_body {
   background-color: #ffffff;
