@@ -43,14 +43,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     
   };
 
-
-
-
-
-
   // Function to clear only the table body (keeps headers intact)
-  function clearTable() {
-    const table = document.getElementById("data-table5");
+  function clearTable(table_df) {
+    const table = document.getElementById(table_df);
     if (!table) return;
 
     const tableBody = table.querySelector("tbody");
@@ -58,10 +53,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         tableBody.innerHTML = ""; // Clears only the data rows
     }
   }
-
   // Function to send a query with the selected year and team
   function sendQuery(selectedYear, selectedTeam) {
-    clearTable(); // Clear the table before sending the new request
+    clearTable("data-table5"); // Clear the table before sending the new request
 
     let query = `SELECT * FROM chalkjuice_data WHERE season = ${selectedYear}`;
     
@@ -82,12 +76,10 @@ document.addEventListener("DOMContentLoaded", async () => {
       console.warn("⚠️ WebSocket is not open. Cannot send message.");
     }
   }
-
   // Event listeners for dropdown changes
   document.getElementById("year-select").addEventListener("change", function () {
     sendQuery(this.value, document.getElementById("team-select").value);
   });
-
   document.getElementById("team-select").addEventListener("change", function () {
     sendQuery(document.getElementById("year-select").value, this.value);
   });
@@ -97,7 +89,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 function send_model_data(team, opp, week1, week2, season1, season2) {
 
   // change to clear the contents of theblock that displays the reuslts //  clearTable(); // Clear the table before sending the new request
-
   if (socket.readyState === WebSocket.OPEN) {
     const message2 = {
       action: "fetch_model",  // WebSocket route name
@@ -115,7 +106,6 @@ function send_model_data(team, opp, week1, week2, season1, season2) {
     console.warn("⚠️ WebSocket is not open. Cannot send message.");
   }
 }
-
 document.getElementById("model_button").addEventListener("click", function () {
   send_model_data(
     document.getElementById("model_team").value,
@@ -127,18 +117,6 @@ document.getElementById("model_button").addEventListener("click", function () {
   );
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
   // WebSocket event handlers /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   socket.onmessage = function (event) {
     console.log("📩 Message received from WebSocket:", event.data);
@@ -148,11 +126,11 @@ document.getElementById("model_button").addEventListener("click", function () {
       console.log("🔍 Parsed JSON:", jsonData);
 
       if (jsonData.label === "headers") {
-        updateTableHeaders(jsonData.data);
+        updateTableHeaders(jsonData.data, "data-table5");
       } else if (jsonData.label === "chunk") {
-        appendRowsToTable(jsonData.data);
+        appendRowsToTable(jsonData.data, "data-table5");
       } else if (jsonData.label === "last_chunk") {
-        appendRowsToTable(jsonData.data);
+        appendRowsToTable(jsonData.data, "data-table5");
 
         // Hide the loader **after** the last chunk has been processed
         setTimeout(() => {
@@ -162,12 +140,17 @@ document.getElementById("model_button").addEventListener("click", function () {
         }, 1);
 
       } else if (jsonData.label == "model_error") {
-        append_data_to_results_block(jsonData.data);
+        append_data_to_results_block(jsonData);
       } else if (jsonData.label == "model_results_team1_win_pct") {
-        append_data_to_results_block(jsonData.data);
-      } else if (jsonData.label == "model_results_df") {
-        append_data_to_results_block(jsonData.data);
+        append_data_to_results_block(jsonData);
 
+
+      } else if (jsonData.label == "model_results_headers") {
+        updateTableHeaders(jsonData.data, "data-table6");
+      } else if (jsonData.label === "model_results_rows") {
+        appendRowsToTable(jsonData.data, "data-table6");
+      } else if (jsonData.label === "model_results_rows_last") {
+        appendRowsToTable(jsonData.data, "data-table6");
 
   
       }
@@ -186,8 +169,8 @@ document.getElementById("model_button").addEventListener("click", function () {
 });
   
 // ** Function to update table headers **
-function updateTableHeaders(headers) {
-  const table = document.getElementById("data-table5");
+function updateTableHeaders(headers, table_df) {
+  const table = document.getElementById(table_df);
   if (!table) return;
 
   const tableHeader = table.querySelector("thead");
@@ -203,8 +186,8 @@ function updateTableHeaders(headers) {
 }
 
 // ** Function to append rows to table without storing in memory **
-function appendRowsToTable(rows) {
-  const table = document.getElementById("data-table5");
+function appendRowsToTable(rows, table_df) {
+  const table = document.getElementById(table_df);
   if (!table) return;
 
   const tableBody = table.querySelector("tbody");
