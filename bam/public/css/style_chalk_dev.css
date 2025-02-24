@@ -6,9 +6,10 @@
 
 /* Rock Salt, Poetsen One, Bodoni Moda*/
 body {
-  font-family: 'Poetsen One', sans-serif;
-  font-size: 14px;
-  font-weight: normal;
+  font-family: "Zain", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
 }
 
 html {
@@ -57,7 +58,6 @@ html::-webkit-scrollbar-thumb {
   justify-content: center; /* Centers horizontally */
   align-items: center; /* Centers vertically */
 }
-
 .centered{
 	width:400px;
 	height:400px;
@@ -95,11 +95,6 @@ html::-webkit-scrollbar-thumb {
 	100%{left:80%;}
 }
 
-
-
-
-
-
 /*---------------------------------------------------------------- ROW area ---------------------------------------------------------------------*/
   /* These have already been applied with 'row' in boostrap but for explanation
   1) When applied to a container, it makes all direct children of the container flex items, 
@@ -122,23 +117,15 @@ html::-webkit-scrollbar-thumb {
   height: 80px;
   margin-right: 0px;
   margin-left: 0px;
-
   /* Vertically centers the boxes inside of the row */
   align-items: center; 
-
-  
 }
-
-
 
 .row_body {
   background-color: #ffffff;
-
   margin-right: 0px;
   margin-left: 0px
 }
-
-
 
 .row_bottom {
   background-image: url('../images/checkard_2.png');
@@ -180,6 +167,7 @@ html::-webkit-scrollbar-thumb {
   align-items: center;   
   box-sizing: border-box;
 }
+
 .blocks_menu img {
   height: 55px;
 }
@@ -189,19 +177,209 @@ html::-webkit-scrollbar-thumb {
   color: #000000;
   border-radius: 16px;
   display: flex;
-  flex-direction: column; /* Stack table properly */
-  justify-content: flex-start;
-  align-items: center;
+  flex-direction: column; /* Arranges child elements in a vertical (column) layout */
+  /* Alternative: flex-direction: row; (horizontal layout) */
+
+  justify-content: flex-start; /* Aligns content to the top */
+  /* Alternative: justify-content: center; (center content vertically) or justify-content: space-between; (even spacing) */
+
+  align-items: center; /* Centers child elements horizontally */
+  /* Alternative: align-items: flex-start; (align left) or align-items: flex-end; (align right) */
   box-sizing: border-box;
   padding: 10px;
-  margin-top: 5px;
+  margin-bottom: 5px;
 }
+
+.blocks_button {
+  background-color: #ffffff;
+}
+
+
+
 .blocks img {
   width: 100%; /* Logo width adjusts to screen size */
 }
 
 /*---------------------------------------------------------------- Block features (Table titles,  Dropdown menus, Input boxes) area ---------------------------------------------------------------------*/
 
+/* Dropdown Container */
+.dropdowns {
+  display: flex;
+  align-items: center; /* Aligns text to the bottom */
+  justify-content: center; /* Centers text horizontally */
+  font-size: 14px;
+  text-align: center;
+  padding: 0.3rem;
+  background-color: #dfc8aa; /* White background */
+  border-radius: 6px; /* Rounded edges */
+
+
+  gap: 6px;
+  color: #ffffff; /* Text color */
+  width:100%;
+  height: 100%;
+  margin: 0px;
+}
+
+/* Style for Dropdown Menus */
+.dropdowns select {
+  font-size: 14px;
+  text-align: center;
+  background-color: #dfc8aa; /* White background */
+  border: 1px solid #dfc8aa; /* Remove black border or customize it */
+  border-radius: 6px; /* Rounded edges */
+  appearance: none; /* Hides default browser styling */
+  padding: 0.1rem;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  line-height: 1; /* Ensures no extra space inside dropdowns */
+  font-weight: bold; /* Makes text bold */
+
+  width:90%;
+  height: 100%;
+}
+
+/* Dropdown Hover & Focus Effect */
+.dropdowns select:hover,
+.dropdowns select:focus {
+  background-color: #894E30; /* Background color on hover/focus */
+  border-color: #894E30; 
+  color: #ffffff; /* Text color */
+}
+
+
+
+
+/* Dropdown Scrollbar */
+.dropdowns select::-webkit-scrollbar {
+  width: 10px;
+}
+.dropdowns select::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #dfc8aa;
+  visibility: visible;
+}
+.dropdowns select::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+
+/*---------------------------------------------------------------- Text websocket input area ---------------------------------------------------------------------*/
+
+
+/* Input Block ------------------------------------------------------------------------------- */
+
+
+
+.dropdown-container {
+  width:100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Aligns label and dropdown to the left */
+  gap: 0px; /* Adds small spacing between label and dropdown */
+  background-color: #ffffff; /* White background */
+  border-radius: 6px; /* Rounded edges */
+  margin-bottom: 5px;
+}
+.dropdown-container2 {
+  margin-bottom: 0px;
+}
+
+.custom-label {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+  pointer-events: none;
+  display: flex;
+  align-items: flex-center; /* Aligns text to the bottom */
+  justify-content: center; /* Centers text horizontally */
+  height: 20%; /* Ensures it takes full height of the container */
+  width: 50%; /* Ensures it takes full width of the container */
+  background-color: #ffffff;
+  border-radius: 6px; /* Rounded edges */
+}
+
+
+ 
+
+
+.model_button {
+  padding: 2px;
+  background: #894E30; /* Background of meter */
+  font-family: "Rock Salt", serif;
+  border: none; /* Removes the border */
+  border-radius: 6px; /* Rounds the corners */
+  font-size: 16px;
+  color: #ffffff;
+  align-self: flex-start;
+}
+  
+/* Hover effect */
+.model_button:hover {
+  background: #713C24; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarges the button */
+}
+
+/* Click effect: add a slight press-down effect */
+.model_button:active {
+  transform: scale(0.95);
+}
+
+/* Remove focus outline */
+.model_button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+
+/* Results Block ------------------------------------------------------------------------------- */
+.results-container {
+  background-color: #dfc8aa;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the elements */
+  justify-content: center;
+  padding: 5px;
+}
+/* Meter --------------------------------------------------------- */
+.custom-meter {
+  width: 100%; /* Ensure the meter fills the width */
+  height: 40px; /* Adjust height as needed */
+}
+
+.custom-meter::-webkit-meter-bar {
+  background: #dfc8aa; /* Background of meter */
+}
+
+.custom-meter::-webkit-meter-optimum-value {
+  background: #894E30; /* Color of the bar */
+}
+
+.custom-meter::-moz-meter-bar {
+  background: #000000;
+}
+
+/* Error messege ------------------------------------------------- */
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.model-message {
+  color: #000000;
+  font-weight: bold;
+  margin: 0px 0;
+  font-size: 20px;
+}
+
+
+
+
+/*---------------------------------------------------------------- TABLE area ---------------------------------------------------------------------*/
 /* Header Container */
 .header-container {
   display: flex;
@@ -237,82 +415,6 @@ html::-webkit-scrollbar-thumb {
   text-transform: capitalize;
 }
 
-/* Dropdown Container */
-.dropdowns {
-  display: flex;
-  align-items: center; /* Centers dropdowns vertically */
-  justify-content: center; /* Centers text horizontally if needed */
-  font-size: 14px;
-  text-align: center;
-  padding: 0.3rem;
-  background-color: #dfc8aa; /* White background */
-  border-radius: 6px; /* Rounded edges */
-
-
-  gap: 6px;
-  color: #000; /* Text color */
-  height: 100%; /* Ensures title fills the container height */
-  margin: 0px;
-}
-
-/* Style for Dropdown Menus */
-.dropdowns select {
-  font-size: 14px;
-  text-align: center;
-  background-color: #dfc8aa; /* White background */
-  border: 1px solid #dfc8aa; /* Remove black border or customize it */
-  border-radius: 6px; /* Rounded edges */
-  appearance: none; /* Hides default browser styling */
-  padding: 0.1rem;
-  height: 100%; /* Set a fixed height to match the title */
-  cursor: pointer;
-  outline: none;
-  transition: all 0.3s ease;
-  line-height: 1; /* Ensures no extra space inside dropdowns */
-  font-weight: bold; /* Makes text bold */
-}
-
-
-/* Dropdown Hover & Focus Effect */
-.dropdowns select:hover,
-.dropdowns select:focus {
-  background-color: #ffffff; /* Background color on hover/focus */
-  border-color: #ffffff; 
-}
-
-/* Dropdown Options */
-.dropdowns select option {
-  background-color: #dfc8aa; /* Background color for options */
-  color: #000; /* Text color for options */
-  border: none;
-}
-
-/* Dropdown Option Hover Effect */
-.dropdowns select option:hover {
-  background-color: #000000 !important; /* Background color on hover (black) */
-  color: #ffffff !important; /* Text color on hover (white) */
-}
-
-/* Dropdown Scrollbar */
-.dropdowns select::-webkit-scrollbar {
-  width: 10px;
-}
-
-.dropdowns select::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: #dfc8aa;
-  visibility: visible;
-}
-
-/* Dropdown Scrollbar Track */
-.dropdowns select::-webkit-scrollbar-track {
-  background-color: #ffffff;
-}
-
-
-
-
-/*---------------------------------------------------------------- TABLE area ---------------------------------------------------------------------*/
 
 
 .table-wrapper {
@@ -322,8 +424,16 @@ html::-webkit-scrollbar-thumb {
   flex-grow: 1; /* Fills remaining space inside .blocks */
   display: flex;
   justify-content: center;
+  align-items: flex-center; /* Aligns text to the bottom */
+
   padding: 6px;
   overflow: auto; /* Enables scrolling if needed */
+  flex-direction: column;
+}
+
+
+.table-wrapper2 {
+  flex-direction: column;
 }
 
 

@@ -80,7 +80,7 @@ load_model()  # Load once when Lambda is cold
 
 def weighted_avg(df, col, gb1, gb2, gb3, gb4, weight1, weight2, weight3, weight4, inte = None):
 
-
+    # gb stands for games back 
     gb2 = gb1 + gb2
     gb3 = gb2 + gb3
     gb4 = gb3 + gb4
@@ -445,7 +445,7 @@ CHUNK_SIZE = 50  # Number of rows per JSON chunk
 def lambda_handler(event, context):
     print("Received event:", json.dumps(event, indent=2))
 
-    connection_id = event["requestContext"]["connectionId"]
+    connection_id = event["requestContext"]["connectionId"] 
     print(connection_id)
 
     body = json.loads(event["body"])
@@ -461,63 +461,80 @@ def lambda_handler(event, context):
     date1 = week_to_date(team, season1, week1)
     date2 = week_to_date(opponent, season2, week2)
 
+
     team, teams_first_game, oldest_game_for_modeling, messege = oldest_usable_game(team, 34)
     opponent, teams_first_game_2, oldest_game_for_modeling_2, messege_2 = oldest_usable_game(opponent, 34)
 
-    # Convert input dates and oldest usable game dates to datetime objects
-    date1_dt = datetime.strptime(date1, '%Y-%m-%d')
-    date2_dt = datetime.strptime(date2, '%Y-%m-%d')
-    oldest_game_for_modeling_dt = datetime.strptime(oldest_game_for_modeling, '%Y-%m-%d')
-    oldest_game_for_modeling_2_dt = datetime.strptime(oldest_game_for_modeling_2, '%Y-%m-%d')
-
-
-    # Check if either date is before the oldest usable game for that team
-    date1_too_early = date1_dt < oldest_game_for_modeling_dt
-    date2_too_early = date2_dt < oldest_game_for_modeling_2_dt
-
-    if date1_too_early:
+    if date1 == None:
         send_chunk(connection_id, {"label": "model_error", "data": messege})
 
-    if date2_too_early:
+        return {"statusCode": 200, "body": "Streaming Complete"}
+
+    elif date2 == None:
         send_chunk(connection_id, {"label": "model_error", "data": messege_2})
 
-    # Only run predictions if BOTH dates are valid
-    if not date1_too_early and not date2_too_early:
-        points_team1, model_used1 = get_predictions_2(team, opponent, date1, date2)
-        points_team2, model_used2 = get_predictions_2(opponent, team, date2, date1)
-        team1_win_pct, df = model_output(team, opponent, points_team1, points_team2)  
+        return {"statusCode": 200, "body": "Streaming Complete"}
 
-        print(type(team1_win_pct))
-
-        csv_buffer = io.StringIO()
-        df.to_csv(csv_buffer, index=False)  # Save without index
-        csv_buffer.seek(0)
-        csv_reader = csv.reader(csv_buffer)
-        print(csv_reader)
-
-        headers = next(csv_reader)  # Extract headers from the first row
-
-        # Send headers separately
-        send_chunk(connection_id, {"label": "model_results_headers", "data": headers})
-
-        filtered_rows = list(itertools.islice(csv_reader, None))
-
-        chunk = []
-        count = 0
-
-        for row in filtered_rows:
-            chunk.append(row)  # Keep rows as lists (not dicts)
-            count += 1
-
-            # Send data in chunks
-            if count >= CHUNK_SIZE:
-                send_chunk(connection_id, {"label": "model_results_rows", "data":chunk})
-                chunk = [] 
-                count = 0
-
-        send_chunk(connection_id, {"label": "model_results_rows_last", "data": chunk})
-        
-
-
+    else:
     
-    return {"statusCode": 200, "body": "Streaming Complete"}
+        # Convert input dates and oldest usable game dates to datetime objects
+        date1_dt = datetime.strptime(date1, '%Y-%m-%d')
+        date2_dt = datetime.strptime(date2, '%Y-%m-%d')
+        oldest_game_for_modeling_dt = datetime.strptime(oldest_game_for_modeling, '%Y-%m-%d')
+        oldest_game_for_modeling_2_dt = datetime.strptime(oldest_game_for_modeling_2, '%Y-%m-%d')
+
+
+        # Check if either date is before the oldest usable game for that team
+        date1_too_early = date1_dt < oldest_game_for_modeling_dt
+        date2_too_early = date2_dt < oldest_game_for_modeling_2_dt
+
+        if date1_too_early:
+            send_chunk(connection_id, {"label": "model_error", "data": messege})
+
+            return {"statusCode": 200, "body": "Streaming Complete"}
+
+        if date2_too_early:
+            send_chunk(connection_id, {"label": "model_error", "data": messege_2})
+
+            return {"statusCode": 200, "body": "Streaming Complete"}
+
+        # Only run predictions if BOTH dates are valid
+        if not date1_too_early and not date2_too_early:
+            points_team1, model_used1 = get_predictions_2(team, opponent, date1, date2)
+            points_team2, model_used2 = get_predictions_2(opponent, team, date2, date1)
+            team1_win_pct, df = model_output(team, opponent, points_team1, points_team2)  
+
+            send_chunk(connection_id, {"label": "model_results_team1_win_pct", "data": team1_win_pct})
+
+            csv_buffer = io.StringIO()
+            df.to_csv(csv_buffer, index=False)  # Save without index
+            csv_buffer.seek(0)
+            csv_reader = csv.reader(csv_buffer)
+            print(csv_reader)
+
+            headers = next(csv_reader)  # Extract headers from the first row
+
+            # Send headers separately
+            send_chunk(connection_id, {"label": "model_results_headers", "data": headers})
+
+            filtered_rows = list(itertools.islice(csv_reader, None))
+
+            chunk = []
+            count = 0
+
+            for row in filtered_rows:
+                chunk.append(row)  # Keep rows as lists (not dicts)
+                count += 1
+
+                # Send data in chunks
+                if count >= CHUNK_SIZE:
+                    send_chunk(connection_id, {"label": "model_results_rows", "data":chunk})
+                    chunk = [] 
+                    count = 0
+
+            send_chunk(connection_id, {"label": "model_results_rows_last", "data": chunk})
+            
+
+
+        
+        return {"statusCode": 200, "body": "Streaming Complete"}
