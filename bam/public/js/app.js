@@ -20,6 +20,8 @@ let heartbeatInterval;
   // i use the heartbeat functions to keep it open to avoid having to reopen
 const socket = new WebSocket("wss://0t9yhsvorj.execute-api.us-east-2.amazonaws.com/production/");
 
+
+
 //definitions---------------------------------------------------------------------------------------------------------------
 // create life
 function startHeartbeat() {
@@ -164,6 +166,7 @@ function append_data_to_results_block(data) {
   // Find the results block in your HTML
   const resultsBlock = document.getElementById("results-block");
 
+
   // Create a new paragraph element to hold the message
   const messageElement = document.createElement("p");
   messageElement.classList.add("model-message"); // Add a class for styling
@@ -212,6 +215,20 @@ document.addEventListener("DOMContentLoaded", async () => {
       console.log('Parsed JSON:', jsonData);
 
       if (jsonData.label === "headers") {
+
+        const loadingImage2 = document.getElementById("loading-image2");
+        if (loadingImage2) {
+            loadingImage2.remove();
+        }
+
+        const resultsContainer2 = document.querySelector(".results-container2");
+    
+        if (resultsContainer2) {
+            resultsContainer2.style.justifyContent = "flex-start"; // Align content to the top
+        }
+
+        document.querySelector(".table-wrapper_hidden2").style.display = "flex";
+
         updateTableHeaders(jsonData.data, "data-table5");
 
       } else if (jsonData.label === "chunk") {
@@ -227,12 +244,37 @@ document.addEventListener("DOMContentLoaded", async () => {
         }, 1);
 
       } else if (jsonData.label == "model_error") {
+
+        const headerContainer3 = document.querySelector(".header-container3");
+        if (headerContainer3) {
+            headerContainer3.style.display = "none";
+        }
+
+        const loadingImage = document.getElementById("loading-image");
+        loadingImage.remove();
+
+        const button = document.getElementById("model_button");
+        button.disabled = false; // Re-enable button on error
         append_data_to_results_block_error(jsonData);
 
       } else if (jsonData.label == "model_results_team1_win_pct") {
+
+        const headerContainer3 = document.querySelector(".header-container3");
+        if (headerContainer3) {
+            headerContainer3.style.display = "none";
+        }
+
+        const loadingImage = document.getElementById("loading-image");
+        loadingImage.remove();
+
+        const button = document.getElementById("model_button");
+        button.disabled = false; // Re-enable button on error
+
         append_data_to_results_block(jsonData);
 
       } else if (jsonData.label == "model_results_headers") {
+        document.querySelector(".header-container2").style.display = "flex";
+        document.querySelector(".table-wrapper_hidden").style.display = "flex";
         updateTableHeaders(jsonData.data, "data-table6");
 
       } else if (jsonData.label === "model_results_rows") {
@@ -259,14 +301,131 @@ document.addEventListener("DOMContentLoaded", async () => {
   //event listeners------------------------------------------------------------------------------------------------------------------------
 
   document.getElementById("year-select").addEventListener("change", function () {
+
+    const tableWrapperHidden = document.querySelector(".table-wrapper_hidden2");
+    if (tableWrapperHidden) {
+        tableWrapperHidden.style.display = "none";
+    }
+
+    const matchupsBlock = document.getElementById("matchups-block");
+
+    // Create the loading image element
+    const loadingImage2 = document.createElement("img");
+
+    loadingImage2.src = "images/loading.gif"; 
+    loadingImage2.style.width = "50px";  
+    loadingImage2.style.height = "50px";  
+    loadingImage2.id = "loading-image2";
+    loadingImage2.alt = "Loading...";
+    loadingImage2.style.display = "block"; 
+
+    matchupsBlock.appendChild(loadingImage2);
+
+    const resultsContainer2 = document.querySelector(".results-container2");
+    
+    if (resultsContainer2) {
+        resultsContainer2.style.justifyContent = "center"; // Align content to the top
+    }
+
     refresh_hisotrical_matchups_table(this.value, document.getElementById("team-select").value);
   });
 
   document.getElementById("team-select").addEventListener("change", function () {
+
+    const tableWrapperHidden = document.querySelector(".table-wrapper_hidden2");
+    if (tableWrapperHidden) {
+        tableWrapperHidden.style.display = "none";
+    }
+
+    const matchupsBlock = document.getElementById("matchups-block");
+
+    // Create the loading image element
+    const loadingImage2 = document.createElement("img");
+
+    loadingImage2.src = "images/loading.gif"; 
+    loadingImage2.style.width = "50px";  
+    loadingImage2.style.height = "50px";  
+    loadingImage2.id = "loading-image2";
+    loadingImage2.alt = "Loading...";
+    loadingImage2.style.display = "block"; 
+
+    matchupsBlock.appendChild(loadingImage2);
+
+    const resultsContainer2 = document.querySelector(".results-container2");
+    
+    if (resultsContainer2) {
+        resultsContainer2.style.justifyContent = "center"; // Align content to the top
+    }
     refresh_hisotrical_matchups_table(document.getElementById("year-select").value, this.value);
   });
 
+  document.getElementById("barryLink").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent default anchor behavior
+    window.location.href = "index.html"; // Navigate to the desired page
+  })
+  
+  document.getElementById("barryLink2").addEventListener("click", function(event) {
+      event.preventDefault(); // Prevent default anchor behavior
+      window.location.href = "index_barry.html"; // Navigate to the desired page
+    })
+
   document.getElementById("model_button").addEventListener("click", function () {
+
+    const button = document.getElementById("model_button");
+    button.disabled = true; // Disable button on click
+
+    // Find the results block in your HTML
+    const resultsBlock = document.getElementById("results-block");
+    // Clear existing content before adding new data
+    resultsBlock.innerHTML = "";
+
+    const headerContainer3 = document.querySelector(".header-container3");
+    if (headerContainer3) {
+        headerContainer3.style.display = "flex";
+    }
+
+
+    const headerContainer = document.querySelector(".header-container2");
+    if (headerContainer) {
+        headerContainer.style.display = "none";
+    }
+    
+    const tableWrapperHidden = document.querySelector(".table-wrapper_hidden");
+    if (tableWrapperHidden) {
+        tableWrapperHidden.style.display = "none";
+    }
+
+    // Get input values
+    const modelTeam = document.getElementById("model_team").value;
+    const modelOpponent = document.getElementById("model_opponent").value;
+
+    // Determine which loading image to use
+    const loadingImageSrc = (modelTeam === "KAN" || modelOpponent === "KAN") 
+        ? "images/loading_taylor.gif" 
+        : "images/loading.gif";
+    
+
+    // Create the loading image element
+    const loadingImage = document.createElement("img");
+
+    // Check conditions and update both the image source and size
+    if (modelTeam === "KAN" || modelOpponent === "KAN") {
+        loadingImage.src = "images/loading_taylor.gif"; 
+        loadingImage.style.width = "120px";  
+        loadingImage.style.height = "80px";  
+        loadingImage.style.borderRadius = "10px"; // Rounds the corners
+    } else {
+        loadingImage.src = "images/loading.gif"; 
+        loadingImage.style.width = "50px";  
+        loadingImage.style.height = "50px";  
+    }
+
+    loadingImage.id = "loading-image";
+    loadingImage.alt = "Loading...";
+    loadingImage.style.display = "block"; 
+
+    resultsBlock.appendChild(loadingImage);
+
     barry_model_results(
       document.getElementById("model_team").value,
       document.getElementById("model_opponent").value,
@@ -276,10 +435,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       document.getElementById("model_season2").value
     );
 
-    // Find the results block in your HTML
-    const resultsBlock = document.getElementById("results-block");
-    // Clear existing content before adding new data
-    resultsBlock.innerHTML = "";
+    
 
     clearTable("data-table6");
   });
