@@ -349,7 +349,7 @@ def get_predictions_2(team, opponent, date1, date2):
 
     return predictions, model_used
 
-def model_output(team, opponent, points_team1, points_team2):    
+def model_output(team, opponent, points_team1, points_team2, week1, week2, season1, season2):    
     sd = 8
     limit = 100
     n = 0
@@ -357,12 +357,13 @@ def model_output(team, opponent, points_team1, points_team2):
     team2_wins = 0
 
     # Create an empty DataFrame to store results
-    df = pd.DataFrame(columns=[team, opponent])
+    df = pd.DataFrame(columns=[f"{team} ({season1},{week1})", f"{opponent} ({season2},{week2})"])
 
     while n < limit:
         # Add some variance to the scores
-        team1_score =  round(np.random.normal(loc=points_team1.item(), scale=sd), 1)
-        team2_score =  round(np.random.normal(loc=points_team2.item(), scale=sd), 1)
+
+        team1_score = max(0, round(np.random.normal(loc=points_team1.item(), scale=sd), 0))
+        team2_score = max(0, round(np.random.normal(loc=points_team2.item(), scale=sd), 0))
 
         # Append the scores to the DataFrame
         df.loc[len(df)] = [team1_score, team2_score]
@@ -381,12 +382,12 @@ def model_output(team, opponent, points_team1, points_team2):
 def oldest_usable_game(team, games_back):
     query = f"""
         WITH ordered_games AS (
-            SELECT date,
+            SELECT date, week,
                 ROW_NUMBER() OVER (PARTITION BY team ORDER BY date ASC) AS row_num
             FROM "{DATABASE}"."{TABLE}"
             WHERE team = '{team}' 
         )
-        SELECT date
+        SELECT date, week
         FROM ordered_games
     """
     df = query_athena_df(query)
@@ -395,13 +396,17 @@ def oldest_usable_game(team, games_back):
     df = df.sort_values(by='Date', ascending=True)  # Sort from oldest to newest
 
     teams_first_game = str(df['Date'].iloc[(0)])[:10]
+    season = str(df['Date'].iloc[(games_back)])[:4]
     oldest_game_for_modeling = str(df['Date'].iloc[(games_back)])[:10]
+    oldest_week_for_modeling = str(df['Week'].iloc[(games_back)])
+
+
     
-    messege = f'Barry reserves the first 34 games of a teams history to use for modeling. The first superbowl era game {team} played was on {teams_first_game}, chose a date equal to or more recent than {oldest_game_for_modeling}.'
+    messege = f'Barry reserves the first 34 games of a teams history to use for modeling. The first superbowl era game {team} played was on {teams_first_game}, make the selections for {team} equal to or more recent than Week {oldest_week_for_modeling}, {season}.'
     # the model used depends on the date due to missing data. 
 
 
-    return team, teams_first_game, oldest_game_for_modeling, messege
+    return team, teams_first_game, oldest_game_for_modeling, oldest_week_for_modeling, messege
 
 def week_to_date(team, season, week):
     week = int(week)
@@ -431,6 +436,17 @@ def week_to_date(team, season, week):
         
     return None  # Return None if no valid date is found within week 1-18
 
+def date_to_week(team, season, date):
+
+    query_week = f'''
+        SELECT week
+        FROM "{DATABASE}"."{TABLE}"
+        WHERE team = '{team}' AND season = {season} AND date = '{date}
+    '''
+    week_from_date = query_athena_df(query_week)
+
+    return week_from_date
+
 def send_chunk(connection_id, message):
     # Initialize API Gateway Client
     api_gateway_endpoint = "https://0t9yhsvorj.execute-api.us-east-2.amazonaws.com/production"
@@ -457,13 +473,14 @@ def lambda_handler(event, context):
     season2 = body.get('season2')
 
     print(team, opponent, week1, week2, season1, season2)
-
+    
     date1 = week_to_date(team, season1, week1)
     date2 = week_to_date(opponent, season2, week2)
 
 
-    team, teams_first_game, oldest_game_for_modeling, messege = oldest_usable_game(team, 34)
-    opponent, teams_first_game_2, oldest_game_for_modeling_2, messege_2 = oldest_usable_game(opponent, 34)
+
+    team, teams_first_game, oldest_game_for_modeling, oldest_week_for_modeling, messege = oldest_usable_game(team, 34)
+    opponent, teams_first_game_2, oldest_game_for_modeling_2, oldest_week_for_modeling2, messege_2 = oldest_usable_game(opponent, 34)
 
     if date1 == None:
         send_chunk(connection_id, {"label": "model_error", "data": messege})
@@ -502,7 +519,11 @@ def lambda_handler(event, context):
         if not date1_too_early and not date2_too_early:
             points_team1, model_used1 = get_predictions_2(team, opponent, date1, date2)
             points_team2, model_used2 = get_predictions_2(opponent, team, date2, date1)
-            team1_win_pct, df = model_output(team, opponent, points_team1, points_team2)  
+            team1_win_pct, df = model_output(team, opponent, points_team1, points_team2, week1, week2, season1, season2)  
+
+            df['Game #'] = df.index + 1
+            df = df[['Game #'] + [col for col in df.columns if col != 'Game #']]
+            df = df.astype(int)
 
             send_chunk(connection_id, {"label": "model_results_team1_win_pct", "data": team1_win_pct})
 

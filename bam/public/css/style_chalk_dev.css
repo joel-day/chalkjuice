@@ -112,8 +112,6 @@ html::-webkit-scrollbar-thumb {
   margin-left: 0px;
 }
 
-
-
 .row_menu2 {
   background-color: #ffffff;
   height: 1000px;
@@ -145,8 +143,6 @@ html::-webkit-scrollbar-thumb {
 
 }
 
-
-
 /*---------------------------------------------------------------- COLUMN area ---------------------------------------------------------------------*/
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
@@ -176,7 +172,6 @@ html::-webkit-scrollbar-thumb {
 
 .blocks_menu2 {
   background-color: #ffffff;
-
 }
 
 .blocks_menu img {
@@ -188,18 +183,14 @@ html::-webkit-scrollbar-thumb {
 }
 
 .blocks {
+  display: flex;
+  flex-direction: column; /* Arranges child elements in a vertical (column) layout */
+  justify-content: flex-start; /* Aligns content to the left */
+  align-items: center; /* Centers child elements horizontally */
+
   background-color: #dfc8aa;
   color: #000000;
   border-radius: 16px;
-  display: flex;
-  flex-direction: column; /* Arranges child elements in a vertical (column) layout */
-  /* Alternative: flex-direction: row; (horizontal layout) */
-
-  justify-content: flex-start; /* Aligns content to the top */
-  /* Alternative: justify-content: center; (center content vertically) or justify-content: space-between; (even spacing) */
-
-  align-items: center; /* Centers child elements horizontally */
-  /* Alternative: align-items: flex-start; (align left) or align-items: flex-end; (align right) */
   box-sizing: border-box;
   padding: 10px;
   margin-bottom: 5px;
@@ -207,13 +198,35 @@ html::-webkit-scrollbar-thumb {
 
 .blocks_button {
   background-color: #ffffff;
+  flex-direction: row;
 }
-
-
 
 .blocks img {
   width: 100%; /* Logo width adjusts to screen size */
 }
+
+.blocks_button img{
+  background-color: #ffffff;
+  vertical-align: top;
+  margin-left: 5px ;
+  width: 10%;
+}
+
+/* Popup Window Styling */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #dfc8aa;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  z-index: 1000;
+  font-size: 16px;
+}
+
 
 /*---------------------------------------------------------------- Block features (Table titles,  Dropdown menus, Input boxes) area ---------------------------------------------------------------------*/
 
@@ -222,17 +235,17 @@ html::-webkit-scrollbar-thumb {
   display: flex;
   align-items: center; /* Aligns text to the bottom */
   justify-content: center; /* Centers text horizontally */
-  font-size: 14px;
   text-align: center;
-  padding: 0.3rem;
+
   background-color: #dfc8aa; /* White background */
-  border-radius: 6px; /* Rounded edges */
-
-
-  gap: 6px;
   color: #ffffff; /* Text color */
+  border-radius: 6px; /* Rounded edges */
+  font-size: 14px;
+  gap: 6px;
+
   width:100%;
   height: 100%;
+  padding: 0.3rem;
   margin: 0px;
 }
 
@@ -244,15 +257,15 @@ html::-webkit-scrollbar-thumb {
   border: 1px solid #dfc8aa; /* Remove black border or customize it */
   border-radius: 6px; /* Rounded edges */
   appearance: none; /* Hides default browser styling */
-  padding: 0.1rem;
   cursor: pointer;
   outline: none;
   transition: all 0.3s ease;
   line-height: 1; /* Ensures no extra space inside dropdowns */
   font-weight: bold; /* Makes text bold */
-
+  
   width:90%;
   height: 100%;
+  padding: 0.1rem;
 }
 
 /* Dropdown Hover & Focus Effect */
@@ -262,9 +275,6 @@ html::-webkit-scrollbar-thumb {
   border-color: #894E30; 
   color: #ffffff; /* Text color */
 }
-
-
-
 
 /* Dropdown Scrollbar */
 .dropdowns select::-webkit-scrollbar {
@@ -283,42 +293,41 @@ html::-webkit-scrollbar-thumb {
 
 
 /* Input Block ------------------------------------------------------------------------------- */
-
-
-
 .dropdown-container {
-  width:100%;
-  height:100%;
   display: flex;
   flex-direction: column;
   align-items: center; /* Aligns label and dropdown to the left */
+
   gap: 0px; /* Adds small spacing between label and dropdown */
   background-color: #ffffff; /* White background */
   border-radius: 6px; /* Rounded edges */
+
+  width:100%;
+  height:100%;
   margin-bottom: 5px;
 }
+
 .dropdown-container2 {
   margin-bottom: 0px;
 }
 
+
 .custom-label {
+  display: flex;
+  align-items: flex-center;
+  justify-content: center; /* Centers text horizontally */
+
   font-size: 20px;
   font-weight: bold;
   color: #000000;
   pointer-events: none;
-  display: flex;
-  align-items: flex-center; /* Aligns text to the bottom */
-  justify-content: center; /* Centers text horizontally */
-  height: 20%; /* Ensures it takes full height of the container */
-  width: 50%; /* Ensures it takes full width of the container */
   background-color: #ffffff;
   border-radius: 6px; /* Rounded edges */
+
+  width: 50%; /* Ensures it takes full width of the container */
+  height: 20%; /* Ensures it takes full height of the container */
   padding-bottom: 13px;
 }
-
-
- 
-
 
 .model_button {
   padding: 2px;
@@ -329,6 +338,7 @@ html::-webkit-scrollbar-thumb {
   font-size: 16px;
   color: #ffffff;
   align-self: flex-start;
+  white-space: nowrap; /* keeps 'historical games' on one line */
 }
   
 /* Hover effect */
@@ -348,34 +358,34 @@ html::-webkit-scrollbar-thumb {
   box-shadow: none;
 }
 
-
 /* Results Block ------------------------------------------------------------------------------- */
 .results-container {
-  background-color: #dfc8aa;
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center; /* Centers the elements */
   justify-content: center;
+
+  background-color: #dfc8aa;
+
+  width: 100%;
+  height: 100%;
   padding: 5px;
 
 }
 
 .results-container2 {
-  background-color: #dfc8aa;
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  
   justify-content: center; /* Center content vertically */
   align-items: center; /* Center content horizontally */
 
-  padding: 5px;
   overflow: auto; /* Enables scrolling if needed */
-}
 
+  background-color: #dfc8aa;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
 
 /* Meter --------------------------------------------------------- */
 .custom-meter {
@@ -397,9 +407,10 @@ html::-webkit-scrollbar-thumb {
 
 /* Error messege ------------------------------------------------- */
 .error-message {
-  color: red;
+  color: #000000;
   font-weight: bold;
   margin: 5px 0;
+  text-align: center;
 }
 
 .model-message {
@@ -409,21 +420,18 @@ html::-webkit-scrollbar-thumb {
   font-size: 20px;
 }
 
-
-
-
 /*---------------------------------------------------------------- TABLE area ---------------------------------------------------------------------*/
 /* Header Container */
 .header-container {
   display: flex;
   justify-content: space-between; /* Space title and dropdowns */
   align-items: center; /* Ensures vertical centering */
-  width: 90%;
-  
+
   background-color: #dfc8aa;
   border-radius: 10px; /* Rounded corners */
-  margin-bottom: 6px;
 
+  width: 90%;
+  margin-bottom: 6px;
   padding: 0px; /* Added padding for consistent spacing */
 }
 
@@ -433,53 +441,41 @@ html::-webkit-scrollbar-thumb {
 
 /* Title Styling */
 .title_table {
-  display: flex;
-  align-items: center; /* Centers text vertically */
-  justify-content: center; /* Centers text horizontally if needed */
-  font-size: 22px;
   text-align: center;
-
-  font-weight: bold; /* Makes text bold */
+  white-space: nowrap; /* keeps 'historical games' on one line */
 
   background-color: #dfc8aa; /* White background */
+  font-size: 22px;
+  font-weight: bold; /* Makes text bold */
   border-radius: 6px; /* Rounded edges */
-
-  padding: 0.1rem;
   color: #000; /* Text color */
-  height: 100%; /* Ensures title fills the container height */
-  margin: 0px;
-
   text-transform: capitalize;
-}
 
-.title_table2 {
-  background-color: #ffffff;
-  font-family: "Poetsen One", serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 28px;
+  height: 100%; /* Ensures title fills the container height */
+  padding: 0.1rem;
+  margin: 0px;
 
 }
 
 .table-wrapper {
-  background-color: #ffffff; /* White background */
-  border-radius: 10px; /* Rounded corners */
-  width: 100%;
-  /*flex-grow: 1; /* Fills remaining space inside .blocks */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-center; /* Aligns text to the bottom */
-
-  padding: 6px;
+    /*flex-grow: 1; /* Fills remaining space inside .blocks */
   overflow: auto; /* Enables scrolling if needed */
-  flex-direction: column;
+
+  background-color: #ffffff; /* White background */
+  border-radius: 10px; /* Rounded corners */
+
+  width: 100%;
+  padding: 6px;
 }
 
 
 .table-wrapper2 {
   flex-direction: column;
 }
-
 
 .table-wrapper_hidden {
     display: none; /* Hide initially */
@@ -491,12 +487,13 @@ html::-webkit-scrollbar-thumb {
 }
 
 table {
-  width: 100%;
-  margin-right: 0rem;
-  color: #212529;
   border-collapse: collapse;
   border-radius: 6px 6px 6px 6px; /* Rounded corners for the box */
   table-layout: auto; /* Allows column width to adjust to content */
+  color: #212529;
+
+  width: 100%;
+  margin-right: 0rem;
 }
 
 .table_tan {
@@ -518,7 +515,6 @@ table {
   
 }
 
-
 .table_tan::-webkit-scrollbar:vertical{
   width: 8px;
   height: 0.5rem; /* rem is the size as a proportion of the font size */ 
@@ -538,8 +534,6 @@ table {
   visibility: visible;
 }
 
-
-
 /* All Cells */
 table, td {
   border-top: 0px solid #dee2e6;
@@ -551,9 +545,6 @@ table, td {
   margin: 0;  /* Remove any margin */
   white-space: nowrap; /* Prevent text from wrapping */
 }
-
-
-
 
 /* Head */
 thead, th {
@@ -573,7 +564,6 @@ thead {
   background-color: #dfc8aa;
 }
 
-
 thead th:first-child {
   border-radius: 6px 0 0 0; /* Top-left corner rounded */
 }
@@ -582,17 +572,9 @@ thead th:last-child {
   border-radius: 0 6px 0 0; /* Top-left corner rounded */
 }
 
-
-
-
-/* Body */
-/*tbody tr:nth-child(even) {
-  background-color: #ffffff;
-}*/
 tbody tr:hover {
   background-color: #dfc8aa !important;
 }
-
 
 /* Adjust column width dynamically */
 td, th {

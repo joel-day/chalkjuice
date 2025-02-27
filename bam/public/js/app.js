@@ -13,11 +13,10 @@ document.querySelector('html').classList.add('no-scroll');
 // Storage for incoming data
 let tableHeadersa = [];
 let tableDataa = [];
-//declares an undefined variable
 let heartbeatInterval;
 
-  //calling connectWebSocket() craetes a brand-new WebSocket object each time. Must reload the handlers. 
-  // i use the heartbeat functions to keep it open to avoid having to reopen
+//calling connectWebSocket() craetes a brand-new WebSocket object each time. Must reload the handlers. 
+// i use the heartbeat functions to keep it open to avoid having to reopen
 const socket = new WebSocket("wss://0t9yhsvorj.execute-api.us-east-2.amazonaws.com/production/");
 
 
@@ -161,6 +160,8 @@ function append_data_to_results_block_error(data) {
 // add the win percentage as text to a blook
 function append_data_to_results_block(data) {
 
+  const team  = document.getElementById("model_team").value
+
   console.log("model result received:", data);
 
   // Find the results block in your HTML
@@ -170,7 +171,7 @@ function append_data_to_results_block(data) {
   // Create a new paragraph element to hold the message
   const messageElement = document.createElement("p");
   messageElement.classList.add("model-message"); // Add a class for styling
-  messageElement.textContent = `Team 1 win percentage: ${Math.round(data.data * 100)}%`; // Set the text content
+  messageElement.textContent = `${team} win percentage: ${Math.round(data.data * 100)}%`; // Set the text content
 
   // Create a new meter element
   const meterElement = document.createElement("meter");
@@ -186,6 +187,32 @@ function append_data_to_results_block(data) {
   resultsBlock.appendChild(messageElement);
   resultsBlock.appendChild(meterElement);
 
+}
+
+// loading image
+function historical_mathchups_loading_image() {
+      // hides the table wrapper while the data loads
+      const tableWrapperHidden = document.querySelector(".table-wrapper_hidden2");
+      if (tableWrapperHidden) {
+          tableWrapperHidden.style.display = "none";
+      }
+  
+      // inserts the loading image while the data loads
+      const matchupsBlock = document.getElementById("matchups-block");
+      const loadingImage2 = document.createElement("img");
+      loadingImage2.src = "images/loading.gif"; 
+      loadingImage2.style.width = "50px";  
+      loadingImage2.style.height = "50px";  
+      loadingImage2.id = "loading-image2";
+      loadingImage2.alt = "Loading...";
+      loadingImage2.style.display = "block"; 
+      matchupsBlock.appendChild(loadingImage2);
+  
+      // changes the css so the loading image is centered within the block
+      const resultsContainer2 = document.querySelector(".results-container2");
+      if (resultsContainer2) {
+          resultsContainer2.style.justifyContent = "center"; // Align content to the top
+      }
 }
 
 //dom----------------------------------------------------------------------------------------------------------------
@@ -302,60 +329,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   document.getElementById("year-select").addEventListener("change", function () {
 
-    const tableWrapperHidden = document.querySelector(".table-wrapper_hidden2");
-    if (tableWrapperHidden) {
-        tableWrapperHidden.style.display = "none";
-    }
+    // generates laoding image, hides the table wrapper and header while laoding data
+    historical_mathchups_loading_image()
 
-    const matchupsBlock = document.getElementById("matchups-block");
-
-    // Create the loading image element
-    const loadingImage2 = document.createElement("img");
-
-    loadingImage2.src = "images/loading.gif"; 
-    loadingImage2.style.width = "50px";  
-    loadingImage2.style.height = "50px";  
-    loadingImage2.id = "loading-image2";
-    loadingImage2.alt = "Loading...";
-    loadingImage2.style.display = "block"; 
-
-    matchupsBlock.appendChild(loadingImage2);
-
-    const resultsContainer2 = document.querySelector(".results-container2");
-    
-    if (resultsContainer2) {
-        resultsContainer2.style.justifyContent = "center"; // Align content to the top
-    }
-
+    // refresh the table
     refresh_hisotrical_matchups_table(this.value, document.getElementById("team-select").value);
   });
 
   document.getElementById("team-select").addEventListener("change", function () {
 
-    const tableWrapperHidden = document.querySelector(".table-wrapper_hidden2");
-    if (tableWrapperHidden) {
-        tableWrapperHidden.style.display = "none";
-    }
+    // generates laoding image, hides the table wrapper and header while laoding data
+    historical_mathchups_loading_image()
 
-    const matchupsBlock = document.getElementById("matchups-block");
-
-    // Create the loading image element
-    const loadingImage2 = document.createElement("img");
-
-    loadingImage2.src = "images/loading.gif"; 
-    loadingImage2.style.width = "50px";  
-    loadingImage2.style.height = "50px";  
-    loadingImage2.id = "loading-image2";
-    loadingImage2.alt = "Loading...";
-    loadingImage2.style.display = "block"; 
-
-    matchupsBlock.appendChild(loadingImage2);
-
-    const resultsContainer2 = document.querySelector(".results-container2");
-    
-    if (resultsContainer2) {
-        resultsContainer2.style.justifyContent = "center"; // Align content to the top
-    }
+    // refresh the table
     refresh_hisotrical_matchups_table(document.getElementById("year-select").value, this.value);
   });
 
@@ -439,6 +425,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     clearTable("data-table6");
   });
+
+  document.getElementById("popup-link").addEventListener("click", function(event) {
+    event.preventDefault();
+    document.getElementById("popup-window").style.display = "block";
+    // document.getElementById("overlay").style.display = "block";
+  });
+
+  document.getElementById("close-popup").addEventListener("click", function() {
+    document.getElementById("popup-window").style.display = "none";
+});
 });
 
 

@@ -100,7 +100,8 @@
                 </div>
             </div>
 
-            <div class="row row_body"> <!-- First Row ------------------------------------------------------------- -->
+<!-- Model Row ---------------------------------------------------------------------------------------------------------------->
+            <div class="row row_body"> 
                 <!-- First Column (EMPTY) -->
                 <div class="col-md-1">
                 </div>
@@ -124,7 +125,7 @@
                     </div>
                 </div>  
                 
-                <!-- Fourth Column -->
+<!-- Fourth Column -->
                 <div class="col-md-4">
                     <div class="blocks" style="height: 234px;">
                         <div class="header-container">
@@ -228,7 +229,7 @@
                                         <option value="1967">1967</option>
                                     </select>
                                     <select id="model_week1">
-                                        <option value="1" selected >Week 1</option>
+                                        <option value="1" >Week 1</option>
                                         <option value="2">Week 2</option>
                                         <option value="3">Week 3</option>
                                         <option value="4">Week 4</option>
@@ -245,7 +246,7 @@
                                         <option value="15">Week 15</option>
                                         <option value="16">Week 16</option>
                                         <option value="17">Week 17</option>
-                                        <option value="18">Week 18</option>
+                                        <option value="18"selected>Week 18</option>
                                     </select>
                                 </div>  
                             </div>
@@ -346,7 +347,7 @@
                                         <option value="1967">1967</option>
                                     </select>
                                     <select id="model_week2">
-                                        <option value="1" selected >Week 1</option>
+                                        <option value="1" >Week 1</option>
                                         <option value="2">Week 2</option>
                                         <option value="3">Week 3</option>
                                         <option value="4">Week 4</option>
@@ -363,7 +364,7 @@
                                         <option value="15">Week 15</option>
                                         <option value="16">Week 16</option>
                                         <option value="17">Week 17</option>
-                                        <option value="18">Week 18</option>
+                                        <option value="18"selected>Week 18</option>
                                     </select>
                                 </div>
                             </div>
@@ -371,7 +372,28 @@
                     </div>
                     <div class="blocks blocks_button" style="height: 50px;">
                         <button id="model_button" class="model_button"> ask Barry </button>
+                        <div>
+                            <a href="#" id="popup-link">
+                                <img src="images/info-icon.png" style="width: 20px; height: 20px; cursor: pointer; padding: 0;">
+                            </a>
+                        </div>
                     </div>
+
+                    <!-- Popup Window -->
+                    <div id="popup-window" class="popup">
+                        <p>
+                            Barry uses Machine Learning and a dataset of all previous NFL matchups to predict the outcome of any two teams.<br><br>
+                            You can compare teams from different years, the same team over different years, and even the same team over different weeks in the same season!<br><br>
+                            When a team wins in an actual NFL matchup, the winning team isn't necessarily the better team, it was just the better team that day. This model simulates a matchup 100 times, providing a better understanding of which team is better.<br><br>
+                            It does so by first generating what the team is expected to score - considering the strength of their offense and the strength of the opponent's defense. Then a score is randomly generated around that mean based on how much scores typically vary across real historical matchups.<br><br>
+                            If you select a week that didn't exist for the given season (e.g., week 18 in 2020), Barry will automatically try previous weeks until the week was present for that year (e.g., it will try week 18, then 17, then 16, etc.).<br><br>
+                            <strong>NOTE:</strong> Barry reserves the first 34 games of a team's existence for model training, so those initial games are not suitable for use in the model.<br><br>
+                            Email <a href="joelday.business@gmail.com">joelday.business@gmail.com</a> with any questions, issues, or fun ideas!<br><br>
+                            - Joel Raymond Day
+                        </p>
+                        <button id="close-popup" class="model_button">Close</button>
+                    </div>
+
                     <div class="blocks" style="height: 81px;">
                         <div id="results-block" class="results-container"></div>
                     </div>
@@ -386,7 +408,7 @@
 
 
             
-            
+<!-- Historical Matchups Row -------------------------------------------------------------------------------------------------- -->
             <div class="row row_body">
                 <!-- First Column (EMPTY) -->
                 <div class="col-md-1">
