@@ -1,0 +1,2662 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20242.24.0807.0327                               -->
+<workbook original-version='18.1' source-build='2024.2.2 (20242.24.0807.0327)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Year' datatype='integer' default-format='n0;-0' name='[Parameter 1]' param-domain-type='list' role='measure' type='quantitative' value='2023'>
+        <calculation class='tableau' formula='2023' />
+        <members>
+          <member value='1967' />
+          <member value='1968' />
+          <member value='1969' />
+          <member value='1970' />
+          <member value='1971' />
+          <member value='1972' />
+          <member value='1973' />
+          <member value='1974' />
+          <member value='1975' />
+          <member value='1976' />
+          <member value='1977' />
+          <member value='1978' />
+          <member value='1979' />
+          <member value='1980' />
+          <member value='1981' />
+          <member value='1982' />
+          <member value='1983' />
+          <member value='1984' />
+          <member value='1985' />
+          <member value='1986' />
+          <member value='1987' />
+          <member value='1988' />
+          <member value='1989' />
+          <member value='1990' />
+          <member value='1991' />
+          <member value='1992' />
+          <member value='1993' />
+          <member value='1994' />
+          <member value='1995' />
+          <member value='1996' />
+          <member value='1997' />
+          <member value='1998' />
+          <member value='1999' />
+          <member value='2000' />
+          <member value='2001' />
+          <member value='2002' />
+          <member value='2003' />
+          <member value='2004' />
+          <member value='2005' />
+          <member value='2006' />
+          <member value='2007' />
+          <member value='2008' />
+          <member value='2009' />
+          <member value='2010' />
+          <member value='2011' />
+          <member value='2012' />
+          <member value='2013' />
+          <member value='2014' />
+          <member value='2015' />
+          <member value='2016' />
+          <member value='2017' />
+          <member value='2018' />
+          <member value='2019' />
+          <member value='2020' />
+          <member value='2021' />
+          <member value='2022' />
+          <member value='2023' />
+        </members>
+      </column>
+      <column caption='Team' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;MIN&quot;'>
+        <calculation class='tableau' formula='&quot;MIN&quot;' />
+        <members>
+          <member value='&quot;ARI&quot;' />
+          <member value='&quot;ATL&quot;' />
+          <member value='&quot;BAL&quot;' />
+          <member value='&quot;BUF&quot;' />
+          <member value='&quot;CAR&quot;' />
+          <member value='&quot;CHI&quot;' />
+          <member value='&quot;CIN&quot;' />
+          <member value='&quot;CLE&quot;' />
+          <member value='&quot;DAL&quot;' />
+          <member value='&quot;DEN&quot;' />
+          <member value='&quot;DET&quot;' />
+          <member value='&quot;GNB&quot;' />
+          <member value='&quot;HOU&quot;' />
+          <member value='&quot;IND&quot;' />
+          <member value='&quot;JAX&quot;' />
+          <member value='&quot;KAN&quot;' />
+          <member value='&quot;LAC&quot;' />
+          <member value='&quot;LAR&quot;' />
+          <member value='&quot;LVR&quot;' />
+          <member value='&quot;MIA&quot;' />
+          <member value='&quot;MIN&quot;' />
+          <member value='&quot;NOR&quot;' />
+          <member value='&quot;NWE&quot;' />
+          <member value='&quot;NYG&quot;' />
+          <member value='&quot;NYJ&quot;' />
+          <member value='&quot;PHI&quot;' />
+          <member value='&quot;PIT&quot;' />
+          <member value='&quot;SEA&quot;' />
+          <member value='&quot;SFO&quot;' />
+          <member value='&quot;TAM&quot;' />
+          <member value='&quot;TEN&quot;' />
+          <member value='&quot;WAS&quot;' />
+        </members>
+      </column>
+      <column alias='Defense' caption='Off/Def' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;DEF&quot;'>
+        <calculation class='tableau' formula='&quot;DEF&quot;' />
+        <aliases>
+          <alias key='&quot;DEF&quot;' value='Defense' />
+          <alias key='&quot;OFF&quot;' value='Offense' />
+        </aliases>
+        <members>
+          <member alias='Offense' value='&quot;OFF&quot;' />
+          <member alias='Defense' value='&quot;DEF&quot;' />
+        </members>
+      </column>
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[Parameter 3]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;OFF&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;DEF&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+    </datasource>
+    <datasource caption='games (NFL)' inline='true' name='federated.0tbpukv1l4fu391fxz2vu01bxwm6' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='localhost' name='mysql.02sma6b0hvmaic1a5776d1lpvf8e'>
+            <connection class='mysql' dbname='NFL' odbc-native-protocol='' one-time-sql='' port='3306' server='localhost' source-charset='' username='root' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='mysql.02sma6b0hvmaic1a5776d1lpvf8e' name='games' table='[games]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='mysql.02sma6b0hvmaic1a5776d1lpvf8e' name='games' table='[games]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>game_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[game_id]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>game_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>game_date</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[game_date]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>game_date</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>false</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>game_year</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[game_year]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>game_year</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>game_team</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[game_team]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>game_team</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>false</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>game_opp</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[game_opp]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>game_opp</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>false</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>game_result</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[game_result]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>game_result</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>game_team_pts</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[game_team_pts]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>game_team_pts</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>game_opp_pts</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[game_opp_pts]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>game_opp_pts</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>game_overtime</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[game_overtime]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>game_overtime</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>game_ending_tds</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[game_ending_tds]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>game_ending_tds</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>game_time_total</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[game_time_total]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>game_time_total</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>game_home</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[game_home]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>game_home</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>passing_com</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[passing_com]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>passing_com</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>passing_att</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[passing_att]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>passing_att</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>passing_yds</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[passing_yds]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>passing_yds</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>passing_tds</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[passing_tds]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>passing_tds</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>passing_int</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[passing_int]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>passing_int</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>passing_sacks_total</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[passing_sacks_total]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>passing_sacks_total</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>passing_sacks_yards</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[passing_sacks_yards]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>passing_sacks_yards</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rushing_att</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[rushing_att]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>rushing_att</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rushing_yds</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[rushing_yds]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>rushing_yds</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rushing_tds</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[rushing_tds]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>rushing_tds</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rushing_fmb</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[rushing_fmb]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>rushing_fmb</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>downs_3D_att</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[downs_3D_att]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>downs_3D_att</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>downs_3D_con</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[downs_3D_con]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>downs_3D_con</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>downs_4D_att</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[downs_4D_att]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>downs_4D_att</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>downs_4D_con</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[downs_4D_con]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>downs_4D_con</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>game_time_off</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[game_time_off]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>game_time_off</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>speams_XPM</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[speams_XPM]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>speams_XPM</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>speams_XPA</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[speams_XPA]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>speams_XPA</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>speams_FGM</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[speams_FGM]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>speams_FGM</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>speams_FGA</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[speams_FGA]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>speams_FGA</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>game_pen_total</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[game_pen_total]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>game_pen_total</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>game_pen_yds</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[game_pen_yds]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>game_pen_yds</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>speams_punts_total</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[speams_punts_total]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>speams_punts_total</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>speams_punts_yds</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[speams_punts_yds]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>speams_punts_yds</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>speams_punts_blocks</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[speams_punts_blocks]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>speams_punts_blocks</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>speams_2PM</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[speams_2PM]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>speams_2PM</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>speams_2PA</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[speams_2PA]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>speams_2PA</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>defense_saf</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[defense_saf]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>defense_saf</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>speams_XPR</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[speams_XPR]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>speams_XPR</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>defense_tds_int</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[defense_tds_int]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>defense_tds_int</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>defense_tds_fmb</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[defense_tds_fmb]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>defense_tds_fmb</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>speams_tds_KR</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[speams_tds_KR]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>speams_tds_KR</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>speams_tds_PR</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[speams_tds_PR]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>speams_tds_PR</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>speams_tds_blocked_fg</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[speams_tds_blocked_fg]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>speams_tds_blocked_fg</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>speams_tds_blocked_punt</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[speams_tds_blocked_punt]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>speams_tds_blocked_punt</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>game_tds_oth</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[game_tds_oth]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>game_tds_oth</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>downs_1D_pass</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[downs_1D_pass]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>downs_1D_pass</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>downs_1D_run</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[downs_1D_run]</local-name>
+            <parent-name>[games]</parent-name>
+            <remote-alias>downs_1D_run</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[games_39C8A81A923D4BB3B68317CF74F8E60B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='% pass att 1D' datatype='real' name='[% pass att (copy)_834854844248834059]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [downs_1D_pass]/([downs_1D_pass]+[downs_1D_run])&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [downs_1D_pass]/([downs_1D_pass]+[downs_1D_run])&#13;&#10;END' />
+      </column>
+      <column caption='% pass tds' datatype='real' default-format='p0.00%' name='[% pass att (copy)_834854844289556504]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [passing_tds]/([passing_tds]+[rushing_tds])&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [passing_tds]/([passing_tds]+[rushing_tds])&#13;&#10;END' />
+      </column>
+      <column caption='% pass att -1' datatype='real' default-format='p0.00%' name='[% pass att (copy)_834854844289798169]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1]-1 AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [passing_att]/([passing_att]+[rushing_att])&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1]-1 AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [passing_att]/([passing_att]+[rushing_att])&#13;&#10;END' />
+      </column>
+      <column caption='% pass att YoY' datatype='real' name='[% pass att -1 (copy)_834854844309397557]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(sum([Calculation_834854844248543242])-sum([% pass att (copy)_834854844289798169]))/sum([% pass att (copy)_834854844289798169])' />
+      </column>
+      <column caption='% pass tds YoY' datatype='real' name='[% pass att YoY (copy)_834854844309803062]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(sum([% pass att (copy)_834854844289556504])-sum([% pass tds (copy)_834854844289933338]))/sum([% pass tds (copy)_834854844289933338])' />
+      </column>
+      <column caption='% pass att Sign' datatype='real' default-format='*🡅;🡇' name='[% pass att YoY (copy)_834854844311814203]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(sum([Calculation_834854844248543242])-sum([% pass att (copy)_834854844289798169]))/sum([% pass att (copy)_834854844289798169])' />
+      </column>
+      <column caption='% pass att YoY_BAM' datatype='real' name='[% pass att YoY (copy)_834854844334272578]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Parameters].[Parameter 3] = &apos;OFF&apos; THEN [% pass att -1 (copy)_834854844309397557] &#13;&#10;ELSE -[% pass att -1 (copy)_834854844309397557]&#13;&#10;END' />
+      </column>
+      <column caption='% pass tds -1' datatype='real' default-format='p0.00%' name='[% pass tds (copy)_834854844289933338]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [passing_tds]/([passing_tds]+[rushing_tds])&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [passing_tds]/([passing_tds]+[rushing_tds])&#13;&#10;END' />
+      </column>
+      <column caption='% pass yds' datatype='real' default-format='p0.00%' name='[% pass tds (copy)_834854844289986587]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [passing_yds]/([passing_yds]+[rushing_yds])&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [passing_yds]/([passing_yds]+[rushing_yds])&#13;&#10;END' />
+      </column>
+      <column caption='% pass yds YoY' datatype='real' name='[% pass tds YoY (copy)_834854844309913655]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(sum([% pass tds (copy)_834854844289986587])-sum([% pass yds (copy)_834854844290195484]))/sum([% pass yds (copy)_834854844290195484])' />
+      </column>
+      <column caption='% pass tds Sign' datatype='real' default-format='*🡅;🡇' name='[% pass tds YoY (copy)_834854844311982140]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(sum([% pass att (copy)_834854844289556504])-sum([% pass tds (copy)_834854844289933338]))/sum([% pass tds (copy)_834854844289933338])' />
+      </column>
+      <column caption='% pass tds YoY_BAM' datatype='real' name='[% pass tds YoY (copy)_834854844334600259]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Parameters].[Parameter 3] = &apos;OFF&apos; THEN [% pass att YoY (copy)_834854844309803062] &#13;&#10;ELSE -[% pass att YoY (copy)_834854844309803062]&#13;&#10;END' />
+      </column>
+      <column caption='% pass yds -1' datatype='real' default-format='p0.00%' name='[% pass yds (copy)_834854844290195484]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1]-1 AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [passing_yds]/([passing_yds]+[rushing_yds])&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1]-1 AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [passing_yds]/([passing_yds]+[rushing_yds])&#13;&#10;END' />
+      </column>
+      <column caption='% pass yds Sign' datatype='real' default-format='*🡅;🡇' name='[% pass yds YoY (copy)_834854844312145981]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(sum([% pass tds (copy)_834854844289986587])-sum([% pass yds (copy)_834854844290195484]))/sum([% pass yds (copy)_834854844290195484])' />
+      </column>
+      <column caption='% pass yds YoY_BAM' datatype='real' name='[% pass yds YoY (copy)_834854844334682180]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Parameters].[Parameter 3] = &apos;OFF&apos; THEN [% pass tds YoY (copy)_834854844309913655] &#13;&#10;ELSE -[% pass tds YoY (copy)_834854844309913655]&#13;&#10;END' />
+      </column>
+      <column caption='4D % ' datatype='real' name='[3D % (copy)_834854844265566224]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [downs_4D_con]/[downs_4D_con]&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [downs_4D_con]/[downs_4D_con]&#13;&#10;END' />
+      </column>
+      <column caption='corner_Field Goal %' datatype='real' name='[4D % (copy)_834854844232790019]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [speams_FGM]/[speams_FGA]&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [speams_FGM]/[speams_FGA]&#13;&#10;END' />
+      </column>
+      <column caption='2P %' datatype='real' name='[4D % (copy)_834854844249227276]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [speams_2PM]/[speams_2PA]&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [speams_2PM]/[speams_2PA]&#13;&#10;END' />
+      </column>
+      <column caption='3D %' datatype='real' name='[Calculation_834854844232310785]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [downs_3D_con]/[downs_3D_con]&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [downs_3D_con]/[downs_3D_con]&#13;&#10;END' />
+      </column>
+      <column caption='% pass att' datatype='real' datatype-customized='true' default-format='p0.00%' name='[Calculation_834854844248543242]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [passing_att]/([passing_att]+[rushing_att])&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [passing_att]/([passing_att]+[rushing_att])&#13;&#10;END' />
+      </column>
+      <column caption='corner_Clutch %' datatype='real' name='[Calculation_834854844249419789]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([4D % (copy)_834854844249227276]*.2)+([Calculation_834854844232310785]*.4)+([3D % (copy)_834854844265566224]*.3)' />
+      </column>
+      <column caption='Rushing Yards' datatype='integer' name='[Calculation_834854844263313423]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [rushing_yds] &#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [rushing_yds] &#13;&#10;END' />
+      </column>
+      <column caption='Passing TDs' datatype='integer' name='[Calculation_834854844266373138]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [passing_tds] &#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [passing_tds] &#13;&#10;END' />
+      </column>
+      <column caption='Parameter Display' datatype='string' name='[Calculation_834854844270067734]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='&apos;Year:  &apos; + STR([Parameters].[Parameter 1]) + &apos;    Team:  &apos; + [Parameters].[Parameter 2] + &apos;  -  &apos; + [Parameters].[Parameter 3]' />
+      </column>
+      <column caption='Wins' datatype='integer' name='[Calculation_834854844289417239]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN&#13;&#10;    IF [game_result] = &apos;W&apos; THEN 1 ELSE 0 END&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN&#13;&#10;    IF [game_result] = &apos;W&apos; THEN 1 ELSE 0 END&#13;&#10;ELSE&#13;&#10;    0&#13;&#10;END' />
+      </column>
+      <column caption='home win %' datatype='real' name='[Calculation_834854844295999528]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Wins (copy)_834854844293287970]/([Wins (copy)_834854844293287970]+[home wins (copy)_834854844295913511])' />
+      </column>
+      <column caption='Total_Pts_game -1' datatype='real' name='[Calculation_834854844298088492]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='AVG([Total Points (copy)_834854844298862638])' />
+      </column>
+      <column caption='prev_year' datatype='integer' name='[Calculation_834854844314701886]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Parameters].[Parameter 1]-1' />
+      </column>
+      <column caption='Rushing TDs' datatype='integer' name='[Passing TDs (copy)_834854844266508307]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [rushing_tds] &#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [rushing_tds] &#13;&#10;END' />
+      </column>
+      <column caption='Passing Yards' datatype='integer' name='[Passing Yds (copy)_834854844261580814]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [passing_yds] &#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [passing_yds] &#13;&#10;END' />
+      </column>
+      <column caption='Total_Pts_game' datatype='real' name='[Points/Game -1 (copy)_834854844299128879]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='AVG([Total YDs (copy)_834854844297084971])' />
+      </column>
+      <column caption='year/team/(off/def) filter' datatype='integer' name='[Team Filter (copy)_834854844243615752]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN 1 &#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN 1&#13;&#10;ELSE 0 END' />
+      </column>
+      <column caption='Total Points -1' datatype='integer' name='[Total Points (copy)_834854844298862638]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1]-1 AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [game_team_pts]&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1]-1 AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [game_team_pts]&#13;&#10;END' />
+      </column>
+      <column caption='Total TDs -1' datatype='integer' name='[Total TDs (copy)_834854844268318741]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1]-1 AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [passing_tds]+[rushing_tds]&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1]-1 AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [passing_tds]+[rushing_tds]&#13;&#10;END' />
+      </column>
+      <column caption='Total TDs YoY' datatype='real' name='[Total TDs (copy)_834854844305231921]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(sum([Total YDs (copy)_834854844266696724])-sum([Total TDs (copy)_834854844268318741]))/sum([Total TDs (copy)_834854844268318741])' />
+      </column>
+      <column caption='Total YDs' datatype='integer' name='[Total TDs Offense (copy)_834854844232962052]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [passing_yds]+[rushing_yds]&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [passing_yds]+[rushing_yds]&#13;&#10;END' />
+      </column>
+      <column caption='Total TDs Sign' datatype='real' default-format='*🡅;🡇' name='[Total TDs YoY (copy)_834854844311298106]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(sum([Total YDs (copy)_834854844266696724])-sum([Total TDs (copy)_834854844268318741]))/sum([Total TDs (copy)_834854844268318741])' />
+      </column>
+      <column caption='Total TDs YoY_BAM' datatype='real' name='[Total TDs YoY (copy)_834854844325023807]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Parameters].[Parameter 3] = &apos;OFF&apos; THEN [Total TDs (copy)_834854844305231921] &#13;&#10;ELSE -[Total TDs (copy)_834854844305231921] &#13;&#10;END' />
+      </column>
+      <column caption='Total TDs' datatype='integer' name='[Total YDs (copy)_834854844266696724]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [passing_tds]+[rushing_tds]&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [passing_tds]+[rushing_tds]&#13;&#10;END' />
+      </column>
+      <column caption='Total YDs -1' datatype='integer' name='[Total YDs (copy)_834854844296798249]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1]-1 AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [passing_yds]+[rushing_yds]&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1]-1 AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [passing_yds]+[rushing_yds]&#13;&#10;END' />
+      </column>
+      <column caption='Total Points' datatype='integer' name='[Total YDs (copy)_834854844297084971]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [game_team_pts]&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [game_team_pts]&#13;&#10;END' />
+      </column>
+      <column caption='Total YDs YoY' datatype='real' name='[Total YDs -1 (copy)_834854844306583602]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(sum([Total TDs Offense (copy)_834854844232962052])-sum([Total YDs (copy)_834854844296798249]))/sum([Total YDs (copy)_834854844296798249])' />
+      </column>
+      <column caption='Total YDs Sign' datatype='real' default-format='*🡅;🡇' name='[Total YDs YoY (copy)_834854844310695993]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(sum([Total TDs Offense (copy)_834854844232962052])-sum([Total YDs (copy)_834854844296798249]))/sum([Total YDs (copy)_834854844296798249])' />
+      </column>
+      <column caption='Total YDs YoY_BAM' datatype='real' name='[Total YDs YoY (copy)_834854844328685632]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Parameters].[Parameter 3] = &apos;OFF&apos; THEN [Total YDs -1 (copy)_834854844306583602] &#13;&#10;ELSE -[Total YDs -1 (copy)_834854844306583602] &#13;&#10;END' />
+      </column>
+      <column caption='Total_Pts_Sign' datatype='real' default-format='*🡅;🡇' name='[Total_Pts_YoY (copy)_834854844310192184]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([Points/Game -1 (copy)_834854844299128879]-[Calculation_834854844298088492])/[Calculation_834854844298088492]' />
+      </column>
+      <column caption='Total_Pts_YoY_BAM' datatype='real' name='[Total_Pts_YoY (copy)_834854844328849473]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Parameters].[Parameter 3] = &apos;OFF&apos; THEN [Total_Pts_game -1 (copy)_834854844307202100] &#13;&#10;ELSE -[Total_Pts_game -1 (copy)_834854844307202100] &#13;&#10;END' />
+      </column>
+      <column caption='Total_Pts_YoY' datatype='real' name='[Total_Pts_game -1 (copy)_834854844307202100]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([Points/Game -1 (copy)_834854844299128879]-[Calculation_834854844298088492])/[Calculation_834854844298088492]' />
+      </column>
+      <column caption='Wins -1' datatype='integer' name='[Wins (copy)_834854844292063261]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1]-1 AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN&#13;&#10;    IF [game_result] = &apos;W&apos; THEN 1 ELSE 0 END&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1]-1 AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN&#13;&#10;    IF [game_result] = &apos;W&apos; THEN 1 ELSE 0 END&#13;&#10;ELSE&#13;&#10;    0&#13;&#10;END' />
+      </column>
+      <column caption='home wins' datatype='integer' name='[Wins (copy)_834854844293287970]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN&#13;&#10;    IF [game_result] = &apos;W&apos; AND [game_home] = 1 THEN 1 ELSE 0 END&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN&#13;&#10;    IF [game_result] = &apos;W&apos; AND [game_home] = 1 THEN 1 ELSE 0 END&#13;&#10;ELSE&#13;&#10;    0&#13;&#10;END' />
+      </column>
+      <column caption='Wins -4' datatype='integer' name='[Wins -1 (copy) (copy) (copy)_834854844292190240]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1]-4 AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN&#13;&#10;    IF [game_result] = &apos;W&apos; THEN 1 ELSE 0 END&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1]-4 AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN&#13;&#10;    IF [game_result] = &apos;W&apos; THEN 1 ELSE 0 END&#13;&#10;ELSE&#13;&#10;    0&#13;&#10;END' />
+      </column>
+      <column caption='Wins -3' datatype='integer' name='[Wins -1 (copy) (copy)_834854844292177951]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1]-3 AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN&#13;&#10;    IF [game_result] = &apos;W&apos; THEN 1 ELSE 0 END&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1]-3 AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN&#13;&#10;    IF [game_result] = &apos;W&apos; THEN 1 ELSE 0 END&#13;&#10;ELSE&#13;&#10;    0&#13;&#10;END' />
+      </column>
+      <column caption='Wins -2' datatype='integer' name='[Wins -1 (copy)_834854844292169758]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1]-2 AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN&#13;&#10;    IF [game_result] = &apos;W&apos; THEN 1 ELSE 0 END&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1]-2 AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN&#13;&#10;    IF [game_result] = &apos;W&apos; THEN 1 ELSE 0 END&#13;&#10;ELSE&#13;&#10;    0&#13;&#10;END' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='games' datatype='table' name='[__tableau_internal_object_id__].[games_39C8A81A923D4BB3B68317CF74F8E60B]' role='measure' type='quantitative' />
+      <column caption='Defense Saf' datatype='integer' name='[defense_saf]' role='measure' type='quantitative' />
+      <column caption='Defense Tds Fmb' datatype='integer' name='[defense_tds_fmb]' role='measure' type='quantitative' />
+      <column caption='Defense Tds Int' datatype='integer' name='[defense_tds_int]' role='measure' type='quantitative' />
+      <column caption='downs 1D pass' datatype='integer' name='[downs_1D_pass]' role='measure' type='quantitative' />
+      <column caption='downs 1D run' datatype='integer' name='[downs_1D_run]' role='measure' type='quantitative' />
+      <column caption='downs 3D att' datatype='integer' name='[downs_3D_att]' role='measure' type='quantitative' />
+      <column caption='downs 3D con' datatype='integer' name='[downs_3D_con]' role='measure' type='quantitative' />
+      <column caption='downs 4D att' datatype='integer' name='[downs_4D_att]' role='measure' type='quantitative' />
+      <column caption='downs 4D con' datatype='integer' name='[downs_4D_con]' role='measure' type='quantitative' />
+      <column caption='Game Date' datatype='string' name='[game_date]' role='dimension' type='nominal' />
+      <column caption='Game Ending Tds' datatype='integer' name='[game_ending_tds]' role='measure' type='quantitative' />
+      <column caption='Game Home' datatype='integer' name='[game_home]' role='measure' type='quantitative' />
+      <column caption='Game Id' datatype='integer' name='[game_id]' role='dimension' type='ordinal' />
+      <column caption='Game Opp' datatype='string' name='[game_opp]' role='dimension' type='nominal' />
+      <column caption='Game Opp Pts' datatype='integer' name='[game_opp_pts]' role='measure' type='quantitative' />
+      <column caption='Game Overtime' datatype='integer' name='[game_overtime]' role='measure' type='quantitative' />
+      <column caption='Game Pen Total' datatype='integer' name='[game_pen_total]' role='measure' type='quantitative' />
+      <column caption='Game Pen Yds' datatype='integer' name='[game_pen_yds]' role='measure' type='quantitative' />
+      <column caption='Game Result' datatype='string' name='[game_result]' role='dimension' type='nominal' />
+      <column caption='Game Tds Oth' datatype='integer' name='[game_tds_oth]' role='measure' type='quantitative' />
+      <column caption='Game Team' datatype='string' name='[game_team]' role='dimension' type='nominal' />
+      <column caption='Game Team Pts' datatype='integer' name='[game_team_pts]' role='measure' type='quantitative' />
+      <column caption='Game Time Off' datatype='integer' name='[game_time_off]' role='measure' type='quantitative' />
+      <column caption='Game Time Total' datatype='integer' name='[game_time_total]' role='measure' type='quantitative' />
+      <column caption='Game Year' datatype='integer' name='[game_year]' role='dimension' type='quantitative' />
+      <column caption='cornerhome losses' datatype='integer' name='[home wins (copy)_834854844293439523]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN&#13;&#10;    IF [game_result] = &apos;L&apos; AND [game_home] = 1 THEN 1 ELSE 0 END&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN&#13;&#10;    IF [game_result] = &apos;L&apos; AND [game_home] = 1 THEN 1 ELSE 0 END&#13;&#10;ELSE&#13;&#10;    0&#13;&#10;END' />
+      </column>
+      <column caption='home losses' datatype='integer' name='[home wins (copy)_834854844295913511]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN&#13;&#10;    IF [game_result] = &apos;L&apos; AND [game_home] = 1 THEN 1 ELSE 0 END&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN&#13;&#10;    IF [game_result] = &apos;L&apos; AND [game_home] = 1 THEN 1 ELSE 0 END&#13;&#10;ELSE&#13;&#10;    0&#13;&#10;END' />
+      </column>
+      <column caption='Passing Att' datatype='integer' name='[passing_att]' role='measure' type='quantitative' />
+      <column caption='Passing Com' datatype='integer' name='[passing_com]' role='measure' type='quantitative' />
+      <column caption='Passing Int' datatype='integer' name='[passing_int]' role='measure' type='quantitative' />
+      <column caption='Passing Sacks Total' datatype='integer' name='[passing_sacks_total]' role='measure' type='quantitative' />
+      <column caption='Passing Sacks Yards' datatype='integer' name='[passing_sacks_yards]' role='measure' type='quantitative' />
+      <column caption='Passing Tds' datatype='integer' name='[passing_tds]' role='measure' type='quantitative' />
+      <column caption='Passing Yds' datatype='integer' name='[passing_yds]' role='measure' type='quantitative' />
+      <column caption='Rushing Att' datatype='integer' name='[rushing_att]' role='measure' type='quantitative' />
+      <column caption='Rushing Fmb' datatype='integer' name='[rushing_fmb]' role='measure' type='quantitative' />
+      <column caption='Rushing Tds' datatype='integer' name='[rushing_tds]' role='measure' type='quantitative' />
+      <column caption='Rushing Yds' datatype='integer' name='[rushing_yds]' role='measure' type='quantitative' />
+      <column caption='speams 2PA' datatype='integer' name='[speams_2PA]' role='measure' type='quantitative' />
+      <column caption='speams 2PM' datatype='integer' name='[speams_2PM]' role='measure' type='quantitative' />
+      <column caption='speams FGA' datatype='integer' name='[speams_FGA]' role='measure' type='quantitative' />
+      <column caption='speams FGM' datatype='integer' name='[speams_FGM]' role='measure' type='quantitative' />
+      <column caption='speams XPA' datatype='integer' name='[speams_XPA]' role='measure' type='quantitative' />
+      <column caption='speams XPM' datatype='integer' name='[speams_XPM]' role='measure' type='quantitative' />
+      <column caption='speams XPR' datatype='integer' name='[speams_XPR]' role='measure' type='quantitative' />
+      <column caption='Speams Punts Blocks' datatype='integer' name='[speams_punts_blocks]' role='measure' type='quantitative' />
+      <column caption='Speams Punts Total' datatype='integer' name='[speams_punts_total]' role='measure' type='quantitative' />
+      <column caption='Speams Punts Yds' datatype='integer' name='[speams_punts_yds]' role='measure' type='quantitative' />
+      <column caption='speams tds KR' datatype='integer' name='[speams_tds_KR]' role='measure' type='quantitative' />
+      <column caption='speams tds PR' datatype='integer' name='[speams_tds_PR]' role='measure' type='quantitative' />
+      <column caption='Speams Tds Blocked Fg' datatype='integer' name='[speams_tds_blocked_fg]' role='measure' type='quantitative' />
+      <column caption='Speams Tds Blocked Punt' datatype='integer' name='[speams_tds_blocked_punt]' role='measure' type='quantitative' />
+      <_.fcp.SchemaViewerObjectModel.false...folder name='%&apos;s' role='measures'>
+        <folder-item name='[% pass att (copy)_834854844289556504]' type='field' />
+        <folder-item name='[% pass att (copy)_834854844289798169]' type='field' />
+        <folder-item name='[% pass att -1 (copy)_834854844309397557]' type='field' />
+        <folder-item name='[% pass att YoY (copy)_834854844309803062]' type='field' />
+        <folder-item name='[% pass att YoY (copy)_834854844311814203]' type='field' />
+        <folder-item name='[% pass att YoY (copy)_834854844334272578]' type='field' />
+        <folder-item name='[% pass tds (copy)_834854844289933338]' type='field' />
+        <folder-item name='[% pass tds (copy)_834854844289986587]' type='field' />
+        <folder-item name='[% pass tds YoY (copy)_834854844309913655]' type='field' />
+        <folder-item name='[% pass tds YoY (copy)_834854844311982140]' type='field' />
+        <folder-item name='[% pass tds YoY (copy)_834854844334600259]' type='field' />
+        <folder-item name='[% pass yds (copy)_834854844290195484]' type='field' />
+        <folder-item name='[% pass yds YoY (copy)_834854844312145981]' type='field' />
+        <folder-item name='[% pass yds YoY (copy)_834854844334682180]' type='field' />
+        <folder-item name='[Calculation_834854844248543242]' type='field' />
+      </_.fcp.SchemaViewerObjectModel.false...folder>
+      <_.fcp.SchemaViewerObjectModel.false...folder name='Team Analysis' role='dimensions'>
+        <folder-item name='[Calculation_834854844270067734]' type='field' />
+      </_.fcp.SchemaViewerObjectModel.false...folder>
+      <_.fcp.SchemaViewerObjectModel.false...folder name='Team Analysis' role='measures'>
+        <folder-item name='[4D % (copy)_834854844232790019]' type='field' />
+        <folder-item name='[Calculation_834854844249419789]' type='field' />
+        <folder-item name='[Calculation_834854844289417239]' type='field' />
+        <folder-item name='[Team Filter (copy)_834854844243615752]' type='field' />
+        <folder-item name='[Wins (copy)_834854844292063261]' type='field' />
+        <folder-item name='[Wins -1 (copy) (copy) (copy)_834854844292190240]' type='field' />
+        <folder-item name='[Wins -1 (copy) (copy)_834854844292177951]' type='field' />
+        <folder-item name='[Wins -1 (copy)_834854844292169758]' type='field' />
+      </_.fcp.SchemaViewerObjectModel.false...folder>
+      <_.fcp.SchemaViewerObjectModel.false...folder name='Totals' role='measures'>
+        <folder-item name='[Calculation_834854844298088492]' type='field' />
+        <folder-item name='[Points/Game -1 (copy)_834854844299128879]' type='field' />
+        <folder-item name='[Total TDs (copy)_834854844268318741]' type='field' />
+        <folder-item name='[Total TDs (copy)_834854844305231921]' type='field' />
+        <folder-item name='[Total TDs Offense (copy)_834854844232962052]' type='field' />
+        <folder-item name='[Total TDs YoY (copy)_834854844311298106]' type='field' />
+        <folder-item name='[Total TDs YoY (copy)_834854844325023807]' type='field' />
+        <folder-item name='[Total YDs (copy)_834854844266696724]' type='field' />
+        <folder-item name='[Total YDs (copy)_834854844296798249]' type='field' />
+        <folder-item name='[Total YDs -1 (copy)_834854844306583602]' type='field' />
+        <folder-item name='[Total YDs YoY (copy)_834854844310695993]' type='field' />
+        <folder-item name='[Total YDs YoY (copy)_834854844328685632]' type='field' />
+        <folder-item name='[Total_Pts_YoY (copy)_834854844310192184]' type='field' />
+        <folder-item name='[Total_Pts_YoY (copy)_834854844328849473]' type='field' />
+        <folder-item name='[Total_Pts_game -1 (copy)_834854844307202100]' type='field' />
+      </_.fcp.SchemaViewerObjectModel.false...folder>
+      <_.fcp.SchemaViewerObjectModel.true...folders-common>
+        <folder name='%&apos;s'>
+          <folder-item name='[% pass att (copy)_834854844289556504]' type='field' />
+          <folder-item name='[% pass att (copy)_834854844289798169]' type='field' />
+          <folder-item name='[% pass att -1 (copy)_834854844309397557]' type='field' />
+          <folder-item name='[% pass att YoY (copy)_834854844309803062]' type='field' />
+          <folder-item name='[% pass att YoY (copy)_834854844311814203]' type='field' />
+          <folder-item name='[% pass att YoY (copy)_834854844334272578]' type='field' />
+          <folder-item name='[% pass tds (copy)_834854844289933338]' type='field' />
+          <folder-item name='[% pass tds (copy)_834854844289986587]' type='field' />
+          <folder-item name='[% pass tds YoY (copy)_834854844309913655]' type='field' />
+          <folder-item name='[% pass tds YoY (copy)_834854844311982140]' type='field' />
+          <folder-item name='[% pass tds YoY (copy)_834854844334600259]' type='field' />
+          <folder-item name='[% pass yds (copy)_834854844290195484]' type='field' />
+          <folder-item name='[% pass yds YoY (copy)_834854844312145981]' type='field' />
+          <folder-item name='[% pass yds YoY (copy)_834854844334682180]' type='field' />
+          <folder-item name='[Calculation_834854844248543242]' type='field' />
+        </folder>
+        <folder name='Team Analysis'>
+          <folder-item name='[4D % (copy)_834854844232790019]' type='field' />
+          <folder-item name='[Calculation_834854844249419789]' type='field' />
+          <folder-item name='[Calculation_834854844270067734]' type='field' />
+          <folder-item name='[Calculation_834854844289417239]' type='field' />
+          <folder-item name='[Team Filter (copy)_834854844243615752]' type='field' />
+          <folder-item name='[Wins (copy)_834854844292063261]' type='field' />
+          <folder-item name='[Wins -1 (copy) (copy) (copy)_834854844292190240]' type='field' />
+          <folder-item name='[Wins -1 (copy) (copy)_834854844292177951]' type='field' />
+          <folder-item name='[Wins -1 (copy)_834854844292169758]' type='field' />
+        </folder>
+        <folder name='Totals'>
+          <folder-item name='[Calculation_834854844298088492]' type='field' />
+          <folder-item name='[Points/Game -1 (copy)_834854844299128879]' type='field' />
+          <folder-item name='[Total TDs (copy)_834854844268318741]' type='field' />
+          <folder-item name='[Total TDs (copy)_834854844305231921]' type='field' />
+          <folder-item name='[Total TDs Offense (copy)_834854844232962052]' type='field' />
+          <folder-item name='[Total TDs YoY (copy)_834854844311298106]' type='field' />
+          <folder-item name='[Total TDs YoY (copy)_834854844325023807]' type='field' />
+          <folder-item name='[Total YDs (copy)_834854844266696724]' type='field' />
+          <folder-item name='[Total YDs (copy)_834854844296798249]' type='field' />
+          <folder-item name='[Total YDs -1 (copy)_834854844306583602]' type='field' />
+          <folder-item name='[Total YDs YoY (copy)_834854844310695993]' type='field' />
+          <folder-item name='[Total YDs YoY (copy)_834854844328685632]' type='field' />
+          <folder-item name='[Total_Pts_YoY (copy)_834854844310192184]' type='field' />
+          <folder-item name='[Total_Pts_YoY (copy)_834854844328849473]' type='field' />
+          <folder-item name='[Total_Pts_game -1 (copy)_834854844307202100]' type='field' />
+        </folder>
+      </_.fcp.SchemaViewerObjectModel.true...folders-common>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='false' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Year' datatype='integer' default-format='n0;-0' name='[Parameter 1]' param-domain-type='list' role='measure' type='quantitative' value='2023'>
+          <calculation class='tableau' formula='2023' />
+        </column>
+        <column caption='Team' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;MIN&quot;'>
+          <calculation class='tableau' formula='&quot;MIN&quot;' />
+        </column>
+        <column alias='Defense' caption='Off/Def' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;DEF&quot;'>
+          <calculation class='tableau' formula='&quot;DEF&quot;' />
+          <aliases>
+            <alias key='&quot;DEF&quot;' value='Defense' />
+            <alias key='&quot;OFF&quot;' value='Offense' />
+          </aliases>
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='games' id='games_39C8A81A923D4BB3B68317CF74F8E60B'>
+            <properties context=''>
+              <relation connection='mysql.02sma6b0hvmaic1a5776d1lpvf8e' name='games' table='[games]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='%att'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='games (NFL)' name='federated.0tbpukv1l4fu391fxz2vu01bxwm6' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Year' datatype='integer' default-format='n0;-0' name='[Parameter 1]' param-domain-type='list' role='measure' type='quantitative' value='2023'>
+              <calculation class='tableau' formula='2023' />
+            </column>
+            <column caption='Team' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;MIN&quot;'>
+              <calculation class='tableau' formula='&quot;MIN&quot;' />
+            </column>
+            <column alias='Defense' caption='Off/Def' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;DEF&quot;'>
+              <calculation class='tableau' formula='&quot;DEF&quot;' />
+              <aliases>
+                <alias key='&quot;DEF&quot;' value='Defense' />
+                <alias key='&quot;OFF&quot;' value='Offense' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0tbpukv1l4fu391fxz2vu01bxwm6'>
+            <column caption='% pass att -1' datatype='real' default-format='p0.00%' name='[% pass att (copy)_834854844289798169]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1]-1 AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [passing_att]/([passing_att]+[rushing_att])&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1]-1 AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [passing_att]/([passing_att]+[rushing_att])&#13;&#10;END' />
+            </column>
+            <column caption='% pass att YoY' datatype='real' name='[% pass att -1 (copy)_834854844309397557]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(sum([Calculation_834854844248543242])-sum([% pass att (copy)_834854844289798169]))/sum([% pass att (copy)_834854844289798169])' />
+            </column>
+            <column caption='% pass att Sign' datatype='real' default-format='*🡅;🡇' name='[% pass att YoY (copy)_834854844311814203]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(sum([Calculation_834854844248543242])-sum([% pass att (copy)_834854844289798169]))/sum([% pass att (copy)_834854844289798169])' />
+            </column>
+            <column caption='% pass att YoY_BAM' datatype='real' name='[% pass att YoY (copy)_834854844334272578]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Parameters].[Parameter 3] = &apos;OFF&apos; THEN [% pass att -1 (copy)_834854844309397557] &#13;&#10;ELSE -[% pass att -1 (copy)_834854844309397557]&#13;&#10;END' />
+            </column>
+            <column caption='% pass att' datatype='real' datatype-customized='true' default-format='p0.00%' name='[Calculation_834854844248543242]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [passing_att]/([passing_att]+[rushing_att])&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [passing_att]/([passing_att]+[rushing_att])&#13;&#10;END' />
+            </column>
+            <column-instance column='[% pass att (copy)_834854844289798169]' derivation='Avg' name='[avg:% pass att (copy)_834854844289798169:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_834854844248543242]' derivation='Avg' name='[avg:Calculation_834854844248543242:qk]' pivot='key' type='quantitative' />
+            <column caption='Game Opp' datatype='string' name='[game_opp]' role='dimension' type='nominal' />
+            <column caption='Game Team' datatype='string' name='[game_team]' role='dimension' type='nominal' />
+            <column caption='Game Year' datatype='integer' name='[game_year]' role='dimension' type='quantitative' />
+            <column caption='Passing Att' datatype='integer' name='[passing_att]' role='measure' type='quantitative' />
+            <column caption='Rushing Att' datatype='integer' name='[rushing_att]' role='measure' type='quantitative' />
+            <column-instance column='[% pass att YoY (copy)_834854844311814203]' derivation='User' name='[usr:% pass att YoY (copy)_834854844311814203:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[% pass att YoY (copy)_834854844334272578]' derivation='User' name='[usr:% pass att YoY (copy)_834854844334272578:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' center='0.0' field='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:% pass att YoY (copy)_834854844334272578:qk]' num-steps='2' reverse='true' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#0000ff</color>
+                <color>#2929f8</color>
+                <color>#5050f2</color>
+                <color>#7676ec</color>
+                <color>#9999e5</color>
+                <color>#babadf</color>
+                <color>#d9d9d9</color>
+                <color>#dfdfba</color>
+                <color>#e5e599</color>
+                <color>#ecec76</color>
+                <color>#f2f250</color>
+                <color>#f8f829</color>
+                <color>#ffff00</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:% pass att YoY (copy)_834854844334272578:qk]' />
+              <text column='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[avg:Calculation_834854844248543242:qk]' />
+              <text column='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[avg:% pass att (copy)_834854844289798169:qk]' />
+              <text column='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:% pass att YoY (copy)_834854844311814203:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontalignment='0' fontname='Tableau Bold' fontsize='12'>% Passing Attempts: </run>
+                <run fontalignment='0'>Æ&#10;</run>
+                <run fontalignment='0' fontsize='10'><![CDATA[     <[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:% pass att YoY (copy)_834854844311814203:qk]>  to  ]]></run>
+                <run bold='true' fontalignment='0' fontname='Tableau Bold' fontsize='12'>Æ </run>
+                <run fontalignment='0' fontname='Tableau Bold' fontsize='15'><![CDATA[<[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[avg:Calculation_834854844248543242:qk]> ]]></run>
+                <run fontalignment='0' fontsize='15'>Æ </run>
+                <run fontalignment='0' fontsize='10'>from</run>
+                <run fontalignment='0'>Æ </run>
+                <run fontalignment='0' fontname='Tableau Bold'>Æ </run>
+                <run bold='true' fontalignment='0' fontname='Tableau Bold'><![CDATA[ <[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[avg:% pass att (copy)_834854844289798169:qk]>]]></run>
+                <run fontalignment='0' fontname='Tableau Bold'>Æ </run>
+                <run fontalignment='0'>Last Year</run>
+                <run fontalignment='0' fontname='Tableau Bold' fontsize='15'>Æ </run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{E512148B-2906-4524-BAE2-B50385A8A05B}' />
+    </worksheet>
+    <worksheet name='%tds'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='games (NFL)' name='federated.0tbpukv1l4fu391fxz2vu01bxwm6' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Year' datatype='integer' default-format='n0;-0' name='[Parameter 1]' param-domain-type='list' role='measure' type='quantitative' value='2023'>
+              <calculation class='tableau' formula='2023' />
+            </column>
+            <column caption='Team' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;MIN&quot;'>
+              <calculation class='tableau' formula='&quot;MIN&quot;' />
+            </column>
+            <column alias='Defense' caption='Off/Def' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;DEF&quot;'>
+              <calculation class='tableau' formula='&quot;DEF&quot;' />
+              <aliases>
+                <alias key='&quot;DEF&quot;' value='Defense' />
+                <alias key='&quot;OFF&quot;' value='Offense' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0tbpukv1l4fu391fxz2vu01bxwm6'>
+            <column caption='% pass tds' datatype='real' default-format='p0.00%' name='[% pass att (copy)_834854844289556504]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [passing_tds]/([passing_tds]+[rushing_tds])&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [passing_tds]/([passing_tds]+[rushing_tds])&#13;&#10;END' />
+            </column>
+            <column caption='% pass tds YoY' datatype='real' name='[% pass att YoY (copy)_834854844309803062]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(sum([% pass att (copy)_834854844289556504])-sum([% pass tds (copy)_834854844289933338]))/sum([% pass tds (copy)_834854844289933338])' />
+            </column>
+            <column caption='% pass tds -1' datatype='real' default-format='p0.00%' name='[% pass tds (copy)_834854844289933338]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [passing_tds]/([passing_tds]+[rushing_tds])&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [passing_tds]/([passing_tds]+[rushing_tds])&#13;&#10;END' />
+            </column>
+            <column caption='% pass tds Sign' datatype='real' default-format='*🡅;🡇' name='[% pass tds YoY (copy)_834854844311982140]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(sum([% pass att (copy)_834854844289556504])-sum([% pass tds (copy)_834854844289933338]))/sum([% pass tds (copy)_834854844289933338])' />
+            </column>
+            <column caption='% pass tds YoY_BAM' datatype='real' name='[% pass tds YoY (copy)_834854844334600259]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Parameters].[Parameter 3] = &apos;OFF&apos; THEN [% pass att YoY (copy)_834854844309803062] &#13;&#10;ELSE -[% pass att YoY (copy)_834854844309803062]&#13;&#10;END' />
+            </column>
+            <column-instance column='[% pass att (copy)_834854844289556504]' derivation='Avg' name='[avg:% pass att (copy)_834854844289556504:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[% pass tds (copy)_834854844289933338]' derivation='Avg' name='[avg:% pass tds (copy)_834854844289933338:qk]' pivot='key' type='quantitative' />
+            <column caption='Game Opp' datatype='string' name='[game_opp]' role='dimension' type='nominal' />
+            <column caption='Game Team' datatype='string' name='[game_team]' role='dimension' type='nominal' />
+            <column caption='Game Year' datatype='integer' name='[game_year]' role='dimension' type='quantitative' />
+            <column caption='Passing Tds' datatype='integer' name='[passing_tds]' role='measure' type='quantitative' />
+            <column caption='Rushing Tds' datatype='integer' name='[rushing_tds]' role='measure' type='quantitative' />
+            <column-instance column='[% pass tds YoY (copy)_834854844311982140]' derivation='User' name='[usr:% pass tds YoY (copy)_834854844311982140:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[% pass tds YoY (copy)_834854844334600259]' derivation='User' name='[usr:% pass tds YoY (copy)_834854844334600259:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' center='0.0' field='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:% pass tds YoY (copy)_834854844334600259:qk]' num-steps='2' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#ffff00</color>
+                <color>#f8f829</color>
+                <color>#f2f250</color>
+                <color>#ecec76</color>
+                <color>#e5e599</color>
+                <color>#dfdfba</color>
+                <color>#d9d9d9</color>
+                <color>#babadf</color>
+                <color>#9999e5</color>
+                <color>#7676ec</color>
+                <color>#5050f2</color>
+                <color>#2929f8</color>
+                <color>#0000ff</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:% pass tds YoY (copy)_834854844334600259:qk]' />
+              <text column='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[avg:% pass att (copy)_834854844289556504:qk]' />
+              <text column='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[avg:% pass tds (copy)_834854844289933338:qk]' />
+              <text column='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:% pass tds YoY (copy)_834854844311982140:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontalignment='0' fontname='Tableau Bold' fontsize='12'>% Passing TDs: </run>
+                <run fontalignment='0'>Æ&#10;</run>
+                <run fontalignment='0' fontsize='10'><![CDATA[     <[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:% pass tds YoY (copy)_834854844311982140:qk]>  to  ]]></run>
+                <run bold='true' fontalignment='0' fontname='Tableau Bold' fontsize='12'>Æ </run>
+                <run fontalignment='0' fontname='Tableau Bold' fontsize='15'><![CDATA[<[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[avg:% pass att (copy)_834854844289556504:qk]> ]]></run>
+                <run fontalignment='0' fontsize='15'>Æ </run>
+                <run fontalignment='0' fontsize='10'>from</run>
+                <run fontalignment='0'>Æ </run>
+                <run fontalignment='0' fontname='Tableau Bold'>Æ </run>
+                <run bold='true' fontalignment='0' fontname='Tableau Bold'><![CDATA[ <[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[avg:% pass tds (copy)_834854844289933338:qk]>]]></run>
+                <run fontalignment='0' fontname='Tableau Bold'>Æ </run>
+                <run fontalignment='0'>Last Year</run>
+                <run fontalignment='0' fontname='Tableau Bold' fontsize='15'>Æ </run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{EF8488C9-5C10-4DAA-A027-F6F62653F9CA}' />
+    </worksheet>
+    <worksheet name='%yds'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='games (NFL)' name='federated.0tbpukv1l4fu391fxz2vu01bxwm6' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Year' datatype='integer' default-format='n0;-0' name='[Parameter 1]' param-domain-type='list' role='measure' type='quantitative' value='2023'>
+              <calculation class='tableau' formula='2023' />
+            </column>
+            <column caption='Team' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;MIN&quot;'>
+              <calculation class='tableau' formula='&quot;MIN&quot;' />
+            </column>
+            <column alias='Defense' caption='Off/Def' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;DEF&quot;'>
+              <calculation class='tableau' formula='&quot;DEF&quot;' />
+              <aliases>
+                <alias key='&quot;DEF&quot;' value='Defense' />
+                <alias key='&quot;OFF&quot;' value='Offense' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0tbpukv1l4fu391fxz2vu01bxwm6'>
+            <column caption='% pass yds' datatype='real' default-format='p0.00%' name='[% pass tds (copy)_834854844289986587]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [passing_yds]/([passing_yds]+[rushing_yds])&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [passing_yds]/([passing_yds]+[rushing_yds])&#13;&#10;END' />
+            </column>
+            <column caption='% pass yds YoY' datatype='real' name='[% pass tds YoY (copy)_834854844309913655]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(sum([% pass tds (copy)_834854844289986587])-sum([% pass yds (copy)_834854844290195484]))/sum([% pass yds (copy)_834854844290195484])' />
+            </column>
+            <column caption='% pass yds -1' datatype='real' default-format='p0.00%' name='[% pass yds (copy)_834854844290195484]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1]-1 AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [passing_yds]/([passing_yds]+[rushing_yds])&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1]-1 AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [passing_yds]/([passing_yds]+[rushing_yds])&#13;&#10;END' />
+            </column>
+            <column caption='% pass yds Sign' datatype='real' default-format='*🡅;🡇' name='[% pass yds YoY (copy)_834854844312145981]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(sum([% pass tds (copy)_834854844289986587])-sum([% pass yds (copy)_834854844290195484]))/sum([% pass yds (copy)_834854844290195484])' />
+            </column>
+            <column caption='% pass yds YoY_BAM' datatype='real' name='[% pass yds YoY (copy)_834854844334682180]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Parameters].[Parameter 3] = &apos;OFF&apos; THEN [% pass tds YoY (copy)_834854844309913655] &#13;&#10;ELSE -[% pass tds YoY (copy)_834854844309913655]&#13;&#10;END' />
+            </column>
+            <column-instance column='[% pass tds (copy)_834854844289986587]' derivation='Avg' name='[avg:% pass tds (copy)_834854844289986587:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[% pass yds (copy)_834854844290195484]' derivation='Avg' name='[avg:% pass yds (copy)_834854844290195484:qk]' pivot='key' type='quantitative' />
+            <column caption='Game Opp' datatype='string' name='[game_opp]' role='dimension' type='nominal' />
+            <column caption='Game Team' datatype='string' name='[game_team]' role='dimension' type='nominal' />
+            <column caption='Game Year' datatype='integer' name='[game_year]' role='dimension' type='quantitative' />
+            <column caption='Passing Yds' datatype='integer' name='[passing_yds]' role='measure' type='quantitative' />
+            <column caption='Rushing Yds' datatype='integer' name='[rushing_yds]' role='measure' type='quantitative' />
+            <column-instance column='[% pass yds YoY (copy)_834854844312145981]' derivation='User' name='[usr:% pass yds YoY (copy)_834854844312145981:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[% pass yds YoY (copy)_834854844334682180]' derivation='User' name='[usr:% pass yds YoY (copy)_834854844334682180:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' center='0.0' field='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:% pass yds YoY (copy)_834854844334682180:qk]' num-steps='2' reverse='true' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#0000ff</color>
+                <color>#2929f8</color>
+                <color>#5050f2</color>
+                <color>#7676ec</color>
+                <color>#9999e5</color>
+                <color>#babadf</color>
+                <color>#d9d9d9</color>
+                <color>#dfdfba</color>
+                <color>#e5e599</color>
+                <color>#ecec76</color>
+                <color>#f2f250</color>
+                <color>#f8f829</color>
+                <color>#ffff00</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:% pass yds YoY (copy)_834854844334682180:qk]' />
+              <text column='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[avg:% pass tds (copy)_834854844289986587:qk]' />
+              <text column='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[avg:% pass yds (copy)_834854844290195484:qk]' />
+              <text column='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:% pass yds YoY (copy)_834854844312145981:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontalignment='0' fontname='Tableau Bold' fontsize='12'>% of Total Yards Passing: </run>
+                <run fontalignment='0'>Æ&#10;</run>
+                <run fontalignment='0' fontsize='10'><![CDATA[     <[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:% pass yds YoY (copy)_834854844312145981:qk]>  to  ]]></run>
+                <run bold='true' fontalignment='0' fontname='Tableau Bold' fontsize='12'>Æ </run>
+                <run fontalignment='0' fontname='Tableau Bold' fontsize='15'><![CDATA[<[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[avg:% pass tds (copy)_834854844289986587:qk]> ]]></run>
+                <run fontalignment='0' fontsize='15'>Æ </run>
+                <run fontalignment='0' fontsize='10'>from</run>
+                <run fontalignment='0'>Æ </run>
+                <run fontalignment='0' fontname='Tableau Bold'>Æ </run>
+                <run bold='true' fontalignment='0' fontname='Tableau Bold'><![CDATA[ <[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[avg:% pass yds (copy)_834854844290195484:qk]>]]></run>
+                <run fontalignment='0' fontname='Tableau Bold'>Æ </run>
+                <run fontalignment='0'>Last Year</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{0201272E-E998-467A-9D8A-61FCFFEF7A13}' />
+    </worksheet>
+    <worksheet name='TDs'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Teams by Year</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='games (NFL)' name='federated.0tbpukv1l4fu391fxz2vu01bxwm6' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Year' datatype='integer' default-format='n0;-0' name='[Parameter 1]' param-domain-type='list' role='measure' type='quantitative' value='2023'>
+              <calculation class='tableau' formula='2023' />
+            </column>
+            <column caption='Team' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;MIN&quot;'>
+              <calculation class='tableau' formula='&quot;MIN&quot;' />
+            </column>
+            <column alias='Defense' caption='Off/Def' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;DEF&quot;'>
+              <calculation class='tableau' formula='&quot;DEF&quot;' />
+              <aliases>
+                <alias key='&quot;DEF&quot;' value='Defense' />
+                <alias key='&quot;OFF&quot;' value='Offense' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0tbpukv1l4fu391fxz2vu01bxwm6'>
+            <column caption='% pass att' datatype='real' datatype-customized='true' default-format='p0.00%' name='[Calculation_834854844248543242]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [passing_att]/([passing_att]+[rushing_att])&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [passing_att]/([passing_att]+[rushing_att])&#13;&#10;END' />
+            </column>
+            <column caption='Total TDs -1' datatype='integer' name='[Total TDs (copy)_834854844268318741]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1]-1 AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [passing_tds]+[rushing_tds]&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1]-1 AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [passing_tds]+[rushing_tds]&#13;&#10;END' />
+            </column>
+            <column caption='Total TDs YoY' datatype='real' name='[Total TDs (copy)_834854844305231921]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(sum([Total YDs (copy)_834854844266696724])-sum([Total TDs (copy)_834854844268318741]))/sum([Total TDs (copy)_834854844268318741])' />
+            </column>
+            <column caption='Total TDs Sign' datatype='real' default-format='*🡅;🡇' name='[Total TDs YoY (copy)_834854844311298106]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(sum([Total YDs (copy)_834854844266696724])-sum([Total TDs (copy)_834854844268318741]))/sum([Total TDs (copy)_834854844268318741])' />
+            </column>
+            <column caption='Total TDs YoY_BAM' datatype='real' name='[Total TDs YoY (copy)_834854844325023807]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Parameters].[Parameter 3] = &apos;OFF&apos; THEN [Total TDs (copy)_834854844305231921] &#13;&#10;ELSE -[Total TDs (copy)_834854844305231921] &#13;&#10;END' />
+            </column>
+            <column caption='Total TDs' datatype='integer' name='[Total YDs (copy)_834854844266696724]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [passing_tds]+[rushing_tds]&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [passing_tds]+[rushing_tds]&#13;&#10;END' />
+            </column>
+            <column-instance column='[Calculation_834854844248543242]' derivation='Avg' name='[avg:Calculation_834854844248543242:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[passing_att]' derivation='Avg' name='[avg:passing_att:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[rushing_att]' derivation='Avg' name='[avg:rushing_att:qk]' pivot='key' type='quantitative' />
+            <column caption='Game Opp' datatype='string' name='[game_opp]' role='dimension' type='nominal' />
+            <column caption='Game Team' datatype='string' name='[game_team]' role='dimension' type='nominal' />
+            <column caption='Game Year' datatype='integer' name='[game_year]' role='dimension' type='quantitative' />
+            <column caption='Passing Att' datatype='integer' name='[passing_att]' role='measure' type='quantitative' />
+            <column caption='Passing Tds' datatype='integer' name='[passing_tds]' role='measure' type='quantitative' />
+            <column caption='Rushing Att' datatype='integer' name='[rushing_att]' role='measure' type='quantitative' />
+            <column caption='Rushing Tds' datatype='integer' name='[rushing_tds]' role='measure' type='quantitative' />
+            <column-instance column='[Total TDs (copy)_834854844268318741]' derivation='Sum' name='[sum:Total TDs (copy)_834854844268318741:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total YDs (copy)_834854844266696724]' derivation='Sum' name='[sum:Total YDs (copy)_834854844266696724:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total TDs YoY (copy)_834854844311298106]' derivation='User' name='[usr:Total TDs YoY (copy)_834854844311298106:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total TDs YoY (copy)_834854844325023807]' derivation='User' name='[usr:Total TDs YoY (copy)_834854844325023807:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='271' />
+            <format attr='border-width' value='0' />
+            <format attr='border-style' value='none' />
+            <format attr='height' value='88' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' center='0.0' field='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:Total TDs YoY (copy)_834854844325023807:qk]' num-steps='2' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#aa0000</color>
+                <color>#b11d1d</color>
+                <color>#b93d3d</color>
+                <color>#c16060</color>
+                <color>#c98686</color>
+                <color>#d1aeae</color>
+                <color>#d9d9d9</color>
+                <color>#a2c3a2</color>
+                <color>#73ad73</color>
+                <color>#4b974b</color>
+                <color>#2a812a</color>
+                <color>#116b11</color>
+                <color>#005500</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' value='0' />
+            <format attr='border-style' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e7f1f5' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-disallow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:Total TDs YoY (copy)_834854844325023807:qk]' />
+              <text column='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[sum:Total YDs (copy)_834854844266696724:qk]' />
+              <text column='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[sum:Total TDs (copy)_834854844268318741:qk]' />
+              <text column='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:Total TDs YoY (copy)_834854844311298106:qk]' />
+              <text column='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[avg:Calculation_834854844248543242:qk]' />
+              <text column='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[avg:rushing_att:qk]' />
+              <text column='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[avg:passing_att:qk]' />
+            </encodings>
+            <customized-tooltip show-buttons='false'>
+              <formatted-text>
+                <run fontcolor='#787878'>Passing Tds:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[sum:passing_tds:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Passing Yds:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[sum:passing_yds:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>% pass att 1D:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:% pass att (copy)_834854844248834059:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>4D %:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:3D % (copy)_834854844232589314:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Field Goal %:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:4D % (copy)_834854844232790019:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>2P %:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:4D % (copy)_834854844249227276:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Total TDs:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:Calculation_834854844231720960:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>3D %:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:Calculation_834854844232310785:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>% pass att:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:Calculation_834854844248543242:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Clutch %:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:Calculation_834854844249419789:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Total YDs:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:Total TDs Offense (copy)_834854844232962052:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Off/Def:&#9;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontalignment='0' fontname='Tableau Bold' fontsize='12'>Total Touchdowns: </run>
+                <run fontalignment='0'>Æ&#10;</run>
+                <run fontalignment='0' fontsize='10'><![CDATA[     <[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:Total TDs YoY (copy)_834854844311298106:qk]>]]></run>
+                <run bold='true' fontalignment='0' fontname='Tableau Bold' fontsize='12'>Æ </run>
+                <run fontalignment='0' fontname='Tableau Bold' fontsize='15'><![CDATA[<[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[sum:Total YDs (copy)_834854844266696724:qk]>]]></run>
+                <run fontalignment='0'><![CDATA[   <[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[sum:Total TDs (copy)_834854844268318741:qk]> Last Year]]></run>
+                <run fontalignment='0' fontname='Tableau Bold' fontsize='15'>Æ </run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <tooltip-style tooltip-mode='none' />
+      </table>
+      <simple-id uuid='{DF975A5B-C113-4A67-A966-973553C70908}' />
+    </worksheet>
+    <worksheet name='YDs'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='games (NFL)' name='federated.0tbpukv1l4fu391fxz2vu01bxwm6' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Year' datatype='integer' default-format='n0;-0' name='[Parameter 1]' param-domain-type='list' role='measure' type='quantitative' value='2023'>
+              <calculation class='tableau' formula='2023' />
+            </column>
+            <column caption='Team' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;MIN&quot;'>
+              <calculation class='tableau' formula='&quot;MIN&quot;' />
+            </column>
+            <column alias='Defense' caption='Off/Def' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;DEF&quot;'>
+              <calculation class='tableau' formula='&quot;DEF&quot;' />
+              <aliases>
+                <alias key='&quot;DEF&quot;' value='Defense' />
+                <alias key='&quot;OFF&quot;' value='Offense' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0tbpukv1l4fu391fxz2vu01bxwm6'>
+            <column caption='Total YDs' datatype='integer' name='[Total TDs Offense (copy)_834854844232962052]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [passing_yds]+[rushing_yds]&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1] AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [passing_yds]+[rushing_yds]&#13;&#10;END' />
+            </column>
+            <column caption='Total YDs -1' datatype='integer' name='[Total YDs (copy)_834854844296798249]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [game_year] = [Parameters].[Parameter 1]-1 AND [Parameters].[Parameter 3] = &apos;OFF&apos; AND [Parameters].[Parameter 2] = [game_team] THEN [passing_yds]+[rushing_yds]&#13;&#10;ELSEIF [game_year] = [Parameters].[Parameter 1]-1 AND [Parameters].[Parameter 3] = &apos;DEF&apos; AND [Parameters].[Parameter 2] = [game_opp] THEN [passing_yds]+[rushing_yds]&#13;&#10;END' />
+            </column>
+            <column caption='Total YDs YoY' datatype='real' name='[Total YDs -1 (copy)_834854844306583602]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(sum([Total TDs Offense (copy)_834854844232962052])-sum([Total YDs (copy)_834854844296798249]))/sum([Total YDs (copy)_834854844296798249])' />
+            </column>
+            <column caption='Total YDs Sign' datatype='real' default-format='*🡅;🡇' name='[Total YDs YoY (copy)_834854844310695993]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(sum([Total TDs Offense (copy)_834854844232962052])-sum([Total YDs (copy)_834854844296798249]))/sum([Total YDs (copy)_834854844296798249])' />
+            </column>
+            <column caption='Total YDs YoY_BAM' datatype='real' name='[Total YDs YoY (copy)_834854844328685632]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Parameters].[Parameter 3] = &apos;OFF&apos; THEN [Total YDs -1 (copy)_834854844306583602] &#13;&#10;ELSE -[Total YDs -1 (copy)_834854844306583602] &#13;&#10;END' />
+            </column>
+            <column caption='Game Opp' datatype='string' name='[game_opp]' role='dimension' type='nominal' />
+            <column caption='Game Team' datatype='string' name='[game_team]' role='dimension' type='nominal' />
+            <column caption='Game Year' datatype='integer' name='[game_year]' role='dimension' type='quantitative' />
+            <column caption='Passing Yds' datatype='integer' name='[passing_yds]' role='measure' type='quantitative' />
+            <column caption='Rushing Yds' datatype='integer' name='[rushing_yds]' role='measure' type='quantitative' />
+            <column-instance column='[Total TDs Offense (copy)_834854844232962052]' derivation='Sum' name='[sum:Total TDs Offense (copy)_834854844232962052:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total YDs (copy)_834854844296798249]' derivation='Sum' name='[sum:Total YDs (copy)_834854844296798249:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total YDs YoY (copy)_834854844310695993]' derivation='User' name='[usr:Total YDs YoY (copy)_834854844310695993:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total YDs YoY (copy)_834854844328685632]' derivation='User' name='[usr:Total YDs YoY (copy)_834854844328685632:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='auto' />
+            <format attr='height' value='66' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' center='0.0' field='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:Total YDs YoY (copy)_834854844328685632:qk]' num-steps='2' reverse='true' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#005500</color>
+                <color>#116b11</color>
+                <color>#2b812b</color>
+                <color>#4b974b</color>
+                <color>#73ad73</color>
+                <color>#a2c3a2</color>
+                <color>#d9d9d9</color>
+                <color>#d1aeae</color>
+                <color>#c98686</color>
+                <color>#c16060</color>
+                <color>#b93d3d</color>
+                <color>#b11d1d</color>
+                <color>#aa0000</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:Total YDs YoY (copy)_834854844328685632:qk]' />
+              <text column='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[sum:Total TDs Offense (copy)_834854844232962052:qk]' />
+              <text column='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[sum:Total YDs (copy)_834854844296798249:qk]' />
+              <text column='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:Total YDs YoY (copy)_834854844310695993:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontalignment='0' fontname='Tableau Bold' fontsize='12'>Total Yards: </run>
+                <run fontalignment='0'>Æ&#10;</run>
+                <run fontalignment='0' fontsize='10'><![CDATA[     <[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:Total YDs YoY (copy)_834854844310695993:qk]>]]></run>
+                <run bold='true' fontalignment='0' fontname='Tableau Bold' fontsize='12'>Æ </run>
+                <run fontalignment='0' fontname='Tableau Bold' fontsize='15'><![CDATA[<[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[sum:Total TDs Offense (copy)_834854844232962052:qk]>]]></run>
+                <run fontalignment='0'><![CDATA[   <[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[sum:Total YDs (copy)_834854844296798249:qk]> Last Year]]></run>
+                <run fontalignment='0' fontname='Tableau Bold' fontsize='15'>Æ </run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{5F69826D-B121-4152-861E-3245A9EDA45D}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource name='Parameters' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Year' datatype='integer' default-format='n0;-0' name='[Parameter 1]' param-domain-type='list' role='measure' type='quantitative' value='2023'>
+          <calculation class='tableau' formula='2023' />
+          <members>
+            <member value='1967' />
+            <member value='1968' />
+            <member value='1969' />
+            <member value='1970' />
+            <member value='1971' />
+            <member value='1972' />
+            <member value='1973' />
+            <member value='1974' />
+            <member value='1975' />
+            <member value='1976' />
+            <member value='1977' />
+            <member value='1978' />
+            <member value='1979' />
+            <member value='1980' />
+            <member value='1981' />
+            <member value='1982' />
+            <member value='1983' />
+            <member value='1984' />
+            <member value='1985' />
+            <member value='1986' />
+            <member value='1987' />
+            <member value='1988' />
+            <member value='1989' />
+            <member value='1990' />
+            <member value='1991' />
+            <member value='1992' />
+            <member value='1993' />
+            <member value='1994' />
+            <member value='1995' />
+            <member value='1996' />
+            <member value='1997' />
+            <member value='1998' />
+            <member value='1999' />
+            <member value='2000' />
+            <member value='2001' />
+            <member value='2002' />
+            <member value='2003' />
+            <member value='2004' />
+            <member value='2005' />
+            <member value='2006' />
+            <member value='2007' />
+            <member value='2008' />
+            <member value='2009' />
+            <member value='2010' />
+            <member value='2011' />
+            <member value='2012' />
+            <member value='2013' />
+            <member value='2014' />
+            <member value='2015' />
+            <member value='2016' />
+            <member value='2017' />
+            <member value='2018' />
+            <member value='2019' />
+            <member value='2020' />
+            <member value='2021' />
+            <member value='2022' />
+            <member value='2023' />
+          </members>
+        </column>
+        <column caption='Team' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;MIN&quot;'>
+          <calculation class='tableau' formula='&quot;MIN&quot;' />
+          <members>
+            <member value='&quot;ARI&quot;' />
+            <member value='&quot;ATL&quot;' />
+            <member value='&quot;BAL&quot;' />
+            <member value='&quot;BUF&quot;' />
+            <member value='&quot;CAR&quot;' />
+            <member value='&quot;CHI&quot;' />
+            <member value='&quot;CIN&quot;' />
+            <member value='&quot;CLE&quot;' />
+            <member value='&quot;DAL&quot;' />
+            <member value='&quot;DEN&quot;' />
+            <member value='&quot;DET&quot;' />
+            <member value='&quot;GNB&quot;' />
+            <member value='&quot;HOU&quot;' />
+            <member value='&quot;IND&quot;' />
+            <member value='&quot;JAX&quot;' />
+            <member value='&quot;KAN&quot;' />
+            <member value='&quot;LAC&quot;' />
+            <member value='&quot;LAR&quot;' />
+            <member value='&quot;LVR&quot;' />
+            <member value='&quot;MIA&quot;' />
+            <member value='&quot;MIN&quot;' />
+            <member value='&quot;NOR&quot;' />
+            <member value='&quot;NWE&quot;' />
+            <member value='&quot;NYG&quot;' />
+            <member value='&quot;NYJ&quot;' />
+            <member value='&quot;PHI&quot;' />
+            <member value='&quot;PIT&quot;' />
+            <member value='&quot;SEA&quot;' />
+            <member value='&quot;SFO&quot;' />
+            <member value='&quot;TAM&quot;' />
+            <member value='&quot;TEN&quot;' />
+            <member value='&quot;WAS&quot;' />
+          </members>
+        </column>
+        <column alias='Defense' caption='Off/Def' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;DEF&quot;'>
+          <calculation class='tableau' formula='&quot;DEF&quot;' />
+          <aliases>
+            <alias key='&quot;DEF&quot;' value='Defense' />
+            <alias key='&quot;OFF&quot;' value='Offense' />
+          </aliases>
+          <members>
+            <member alias='Offense' value='&quot;OFF&quot;' />
+            <member alias='Defense' value='&quot;DEF&quot;' />
+          </members>
+        </column>
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='7' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='5' type-v2='layout-basic' w='82400' x='800' y='1000'>
+              <zone h='19719' id='3' name='TDs' show-title='false' w='82400' x='800' y='20125'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='19125' id='12' name='YDs' show-title='false' w='82400' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='19719' id='14' name='%att' show-title='false' w='82400' x='800' y='59563'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='19719' id='16' name='%tds' show-title='false' w='82400' x='800' y='39844'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='19718' id='18' name='%yds' show-title='false' w='82400' x='800' y='79282'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98000' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='16000' x='83200' y='1000'>
+              <zone h='6500' id='9' mode='compact' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='6500' id='10' mode='compact' param='[Parameters].[Parameter 2]' type-v2='paramctrl' w='16000' x='83200' y='7500'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='6500' id='11' mode='compact' param='[Parameters].[Parameter 3]' type-v2='paramctrl' w='16000' x='83200' y='14000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='22' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='21' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='145' h='19125' id='12' is-fixed='true' name='YDs' show-title='false' w='82400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6500' id='9' mode='compact' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='16000' x='83200' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6500' id='10' mode='compact' param='[Parameters].[Parameter 2]' type-v2='paramctrl' w='16000' x='83200' y='7500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6500' id='11' mode='compact' param='[Parameters].[Parameter 3]' type-v2='paramctrl' w='16000' x='83200' y='14000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='150' h='19719' id='3' is-fixed='true' name='TDs' show-title='false' w='82400' x='800' y='20125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='150' h='19719' id='16' is-fixed='true' name='%tds' show-title='false' w='82400' x='800' y='39844'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='149' h='19719' id='14' is-fixed='true' name='%att' show-title='false' w='82400' x='800' y='59563'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='150' h='19718' id='18' is-fixed='true' name='%yds' show-title='false' w='82400' x='800' y='79282'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{42366ACC-0027-41E1-90FF-BF4EB0EBFEFF}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='%att'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='%tds'>
+          <zoom type='entire-view' />
+          <selection-collection>
+            <tuple-selection>
+              <tuple-reference>
+                <tuple-descriptor>
+                  <pane-descriptor>
+                    <x-fields />
+                    <y-fields />
+                  </pane-descriptor>
+                  <columns>
+                    <field>[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[avg:% pass att (copy)_834854844289556504:qk]</field>
+                    <field>[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[avg:% pass att (copy)_834854844289798169:qk]</field>
+                    <field>[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[avg:% pass tds (copy)_834854844289933338:qk]</field>
+                    <field>[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[avg:% pass tds (copy)_834854844289986587:qk]</field>
+                    <field>[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[avg:% pass yds (copy)_834854844290195484:qk]</field>
+                    <field>[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[avg:Calculation_834854844248543242:qk]</field>
+                    <field>[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[avg:passing_att:qk]</field>
+                    <field>[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[avg:rushing_att:qk]</field>
+                    <field>[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[sum:Total TDs (copy)_834854844268318741:qk]</field>
+                    <field>[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[sum:Total TDs Offense (copy)_834854844232962052:qk]</field>
+                    <field>[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[sum:Total YDs (copy)_834854844266696724:qk]</field>
+                    <field>[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[sum:Total YDs (copy)_834854844296798249:qk]</field>
+                    <field>[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:% pass tds YoY (copy)_834854844311982140:qk]</field>
+                    <field>[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:% pass tds YoY (copy)_834854844334600259:qk]</field>
+                  </columns>
+                </tuple-descriptor>
+                <tuple>
+                  <value>0.64880952000000003</value>
+                  <value>0.57026893000000001</value>
+                  <value>0.64880952000000003</value>
+                  <value>0.70213687000000002</value>
+                  <value>0.67084509999999997</value>
+                  <value>0.58328964000000005</value>
+                  <value>31.8848</value>
+                  <value>29.1819</value>
+                  <value>41</value>
+                  <value>5664</value>
+                  <value>37</value>
+                  <value>6608</value>
+                  <value>0.0</value>
+                  <value>0.0</value>
+                </tuple>
+              </tuple-reference>
+            </tuple-selection>
+          </selection-collection>
+        </viewpoint>
+        <viewpoint name='%yds'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='TDs'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='YDs'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='6' />
+      <simple-id uuid='{42639247-368F-40F7-874E-36952D765BF7}' />
+    </window>
+    <window class='worksheet' name='TDs'>
+      <cards>
+        <edge name='left'>
+          <strip size='251'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card mode='compact' param='[Parameters].[Parameter 2]' type='parameter' />
+            <card mode='compact' param='[Parameters].[Parameter 3]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:Total TDs YoY (copy)_834854844325023807:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[none:Calculation_834854844235538437:qk]</field>
+            <field>[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[none:Calculation_834854844270067734:nk]</field>
+            <field>[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[none:Team Filter (copy)_834854844242321415:qk]</field>
+            <field>[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[none:Team Filter (copy)_834854844243615752:qk]</field>
+            <field>[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[none:Year Filter (copy)_834854844240715782:qk]</field>
+            <field>[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[none:off filter (copy)_834854844244779017:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{72BB0249-AFEE-43B7-918F-F9AC8EDA50E5}' />
+    </window>
+    <window class='worksheet' name='YDs'>
+      <cards>
+        <edge name='left'>
+          <strip size='231'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card mode='compact' param='[Parameters].[Parameter 2]' type='parameter' />
+            <card mode='compact' param='[Parameters].[Parameter 3]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:Total YDs YoY (copy)_834854844328685632:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+      </viewpoint>
+      <simple-id uuid='{43DEB5DE-B729-4387-AB12-F5678D8191C1}' />
+    </window>
+    <window class='worksheet' name='%att'>
+      <cards>
+        <edge name='left'>
+          <strip size='292'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:% pass att YoY (copy)_834854844334272578:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+      </viewpoint>
+      <simple-id uuid='{945018B0-DFEB-46F2-87FA-6A901B71E322}' />
+    </window>
+    <window class='worksheet' name='%tds'>
+      <cards>
+        <edge name='left'>
+          <strip size='236'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:% pass tds YoY (copy)_834854844334600259:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+      </viewpoint>
+      <simple-id uuid='{32CEF8C3-5E51-4B6A-B353-C91CAFF2F61E}' />
+    </window>
+    <window class='worksheet' name='%yds'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0tbpukv1l4fu391fxz2vu01bxwm6].[usr:% pass yds YoY (copy)_834854844334682180:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+      </viewpoint>
+      <simple-id uuid='{61DA4B04-30E6-4301-B2AB-4BE8A8DC9D45}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='54' name='%att' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAAA2CAYAAACRF5YDAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAAtklEQVR4nO3VsQ2AQAwEQR7Rf8umBCLkYGdiB5esfGZmLoi6twfAJgGQJgDSBECaAEgT
+      AGkCIO35Pjn/r4AlPgBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBI
+      EwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQB
+      kCYA0gRAmgBIEwBpAiBNAKQJgDQBkPYC5SkEazBoEwUAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='54' name='%tds' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAAA2CAYAAACRF5YDAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAAtklEQVR4nO3VoRGAUAwFQT5D/y2HEnBE3K6OeOYmZ2bmgqh7ewBsEgBpAiBNAKQJgDQB
+      kCYA0p6vg3P+mAE7fADSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQ
+      JgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkC
+      IE0ApAmANAGQJgDSBECaAEgTAGkCIO0Fb0YEbJ0xpvMAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='54' name='%yds' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAAA2CAYAAACRF5YDAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAAtklEQVR4nO3VsQ2AQAwEQR7Rf8umBCLkYGdiB5esfGZmLoi6twfAJgGQJgDSBECaAEgT
+      AGkCIO35Pjn/r4AlPgBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBI
+      EwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQB
+      kCYA0gRAmgBIEwBpAiBNAKQJgDQBkPYC5SkEazBoEwUAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAASfklEQVR4nO3de3BU5f3H8Xful002103IPQGSEIhECJBiMBAuKrQVVLBqEfm1M6D2MrXD
+      tFIvQctMx9qx2tbq0I6tlSlSldaWFhFB5KKEm1yTGJKQG4GEBLK5kdvu/v74/jYYtLH0Z7LK
+      833NMDln9+zZZ3eez57zPMuer5fL5XKhlKG8Pd0ApTxJA6CM5vvxFa87vTzVDqU8Qo8Aymga
+      AGU0DYAymgZAGU0DoIymAVBG0wAoo2kAlNE0AMpoGgBlNA2AMpoGQBlNA/A5CQ8Op2hJEau+
+      vmrgthRbCumj0gfW89LzyEnJIS89j+jQaG6aeNOn7mvlvJXD3l4lfD97E/WfaO1qpbqpmgOV
+      B1izZA0pthRqm2uJC4/jzYNvsmzmMl7f9zpN9iZO1J3gl/f9kk3Fm1gxdwVTxkyhrasNH28f
+      woLDiIuII8g/iDGxY9h3ah/bj23nnP2cp1/iNUmPAMMgIiSCJnsTVY1VVDRWUJBVQGRIJMEB
+      wQC0tLdg77Kz+fBmbsy6kcTIRBxOB49seGTg/lNnTzExZSJtXW1093V78uVc07w+/pNI/T3A
+      /09sWCzt3e0E+gUSHxHPyfqT5I7OpaW9hdCgUBrtjXT3dmPvsjN21FgqzlWQnZRNn6OP3v5e
+      TjedJiMugwC/AJrsTSRFJdFob+R823kNwTDRACij6SmQMpoGYIQULSniuf95joVTFwLg7+vP
+      Sw+8xJPfeJLIkMiBZUuAhTun30nN8zUE+AZ4uNXXPg3AMNr26DYKsgoAuNR7CZfLhY+XDwCT
+      0yYTExZDhCWC6RnTB5bDgsMoGF/AodOHBvaTlZDF+MTxABROKCTVlsqtU25l2thpLJi0AD8f
+      P1JsKYOe28fbhwhLBNGh0WTGZxJjjRmhV/3lotOgw2R07Gimjp1KwfgCdpXuYlPxJi52XGTd
+      ynUcrDpIT38PVY1VlJ4pJTk6eWB5xdwV+Pn4MS5+HNnJ2RyqOoSvjy8x1hhK6kuIi4gjJDCE
+      D8o/YE72HBxOBz7ePlgCLGQnZbNo2iLKzpTR29+Ly+XiH4f+Qf64fBouNLB81nJqmmvo6+/D
+      38+fje9vxPTLQukgeBjdkHEDByoP0OfoY9aEWczInMGGvRv43vzv8eirj1I4oZDEqETWvbOO
+      BZMWDCw7nA7unH4nbxS/gcPpIDk6GZvVRkd3B5YAC61drYyJHUP52XLGxI5hV8kupqVP41LP
+      JcIt4ZxrPUdPXw82q43iimJsVhveXt6kx6XT1dNFb3/vwOyS6TQAHhAXHsfZ1rOeboZCxwAe
+      oZ3/i0MDoIymAVBG0wAoo2kAlNE0AMpoGgBlNA2AMpoGQBlNA6CMpgFQRtMAKKN5aZlUZTI9
+      AiijDfpBzKw1szzUDKU8Q38PoIymp0DKaBoAZTQNgDKaBkAZTQOgjKYBUEbTACijaQCU0TQA
+      ymgaAGU0DYAymgZAGU0DMIwWTl1I0ZIipo6ZOnDbvInzBm2zct5KvLy8eHjRwxQtKRoopHel
+      FFsKN+fcPLD+rcJv4efjNzwNN4jWBxhGbx54k/zMfOxddn5//++pa65jXs48+vr7mDtxLi3t
+      LcRFxOFyudh+fDuptlTuLbiX3LRcjtQc4ULHBXJScnA4HZSeKeWWnFsonFBISFAIGXEZOJwO
+      pmdMp7a5lp6+HlJjUmmyN5FiSyEyJJI9ZXvIiMtgy4dbKGso46OGjzz9lnzh6BFgBESGRFLd
+      VI0l0MKxmmP4+viSakslITLhE9smRCRQcqaEGGsME5Mn4ufrR5+jj+a2Zt45/g7e3t4E+QXR
+      2NpIYlQiR2uO0tLRwu15t3P24lnOt53nQscFDlcdpqa5hsz4TPocfbRfavfAK//i098DDLPR
+      saOpaqxiUuokKs5VEGYJwwsvokOjudh5EW9vb6oaqwgNDCXQP5D2S+1cl3wdH57+kOzkbOxd
+      dlwuF06Xk56+HiyBFlwuF2HBYZTUlzApbRIHKg6QnZwt5VR7u4kIicDhcNDT30NydDK1zbV0
+      dnfS3q0huJIGQBlNT4GU0TQAHpIYlciT33iSv676K5PTJlO0pIiTz5xkXPw4TzfNKBqAEbRo
+      6iI2PrQRgPqWeupb6nG6nJTUl/Cbt37D8drjlDWUDdo+PiKecQnjPlEGFcBmtQFSRlWD89/R
+      adARNOe6OeRn5hMbFku/s5/1u9eTOzqX9Lh0Fk1dxAtvvzCw7YxxM0iLSeOtI28RbgnHEmAB
+      4Ds3f4f6C/VkxGVQfb6a7ce343Q5AVj19VWcqDtB4YRCdpzcQXlDOaebTnvktX5Z6CB4BFkC
+      LGQlZHGw6iCJkYksm7mMsxfP8vJ7L3PPjHtYv3v9oO3jI+Lx8/UjxhrDmQtnSIhMwN/XH3uX
+      naiQKBrtjTS1NdHd1w1ATkoOrZ2tJEYlUn62nJrzNZ54mV8qGgBlNB0DKKNpAJTRNADKaBoA
+      ZTQNgDKaBkAZTQOgjKYBUEbTACijaQCU0TQAymgaAGW0Qf8devVtj3mqHUp5hNYJVkYbdATY
+      uXOnh5qhlGcM/j2AVyqw3FNtUWrEXRGAWcBOjzVGqZGms0DKaBoAZTQNgDKaBkAZTQOgjKYB
+      UEbTACijaQCU0TQAymgaAGU0DYAyml4efQhRURAUBL290NICTifceCOcOQOVlZ/+mJQUsFig
+      pOST92VmwqhRUFcHSUnw0Udw7tzwvgY1NA3AEJYsAR8f6fibNkFrKzz4ILhc8MorcNNNcvst
+      t8COHTB3LmzbBgEBsGIFNDTAxYuQnQ2PPy77vP9++PWv4a67IDAQ/vY3mDIFPvwQTp6UUKiR
+      o6dAQ9i7VzppSAjccYfcFh8Pb7wBYWGyHhEhy6Gh8sk/ejTExUFzM0RHw4QJEgR/f+ncdXWy
+      XlUF589LuKKjobpablcjS48AQzhxAnx9wctLOmp/P6xdC2+/LZ/6VVVyCtPQAPX1snzwoDw2
+      NFSOBJMnwz33wG9/K7dv2yZHkuBgePddaGyEmhoJWmgotGsl0xGlvwcYZpmZ8ldPbb6Y9Agw
+      zLTjf7FpAIbB978v5/XPPw9WKzz3HNx9N9jtMHMmfPWrcOSIzCa5l729ITER1q2D3Fw5VVLD
+      TwfBV8Fmg3nzBq9fKT4eFi+Gtjbo6IAHHpDzen9/uT8/Xzp8fv7g5YkTJSyLF8u4wWq9vM9p
+      0z67bXPnQkwM3HabjC+ysmD2bMjLk8ffeiukp//7dgcHy9+EBHkNptAjwFV46CEZ0F53nXTq
+      2bNlABweDsXF0NQkg+aSEpnVeewx6XwWC1x/vXyqWyzyvUJg4ODlP/0Jbr5ZjgLl5TLr9Ic/
+      SMccPVoCUlsrQQoIkAHzmTOyT6sVCgtlkD53LuzZI0eRuDjo6pK2+/lBbOzl5ZYWWLUKDhyQ
+      25KSYMMGmbItK4NHHpH9jB8vkwEnT8KFCx5524eVBuAqvPeeTHu6Z2oqK8HhkM7o7mi1tVBR
+      ATfcAE8/DQ8/DD/+sXSgtWtlanX2bNi/X6ZE3cvFxZCaCu+/D6tXwzPPyP66uuDYMejrk6BZ
+      LHDq1OB2dXRIp42KkucpKJAjkI+PPN7hkLbabLJNby9MmiRB6+iQL+dq/q+iqvvLuSNH5HF1
+      dfLvWuz8oLNAynA6BlBG0wAoo2kAlNE0AMpoGgBlNA2AMpoGQBlNA6CMpgFQRtMAKKNpAJTR
+      NADKaFojTBlNy6Qqo+kpkDLaFT+ImeWRRijlKVecAnl5riVKeYCeAimjaQCU0TQAymgaAGU0
+      DYAymgZAGU0DoIymAVBG0wAoo2kAlNE0AMpoGgBlNL08+hDeeksuL261wqxZUihvxQpITpZy
+      p+fOyfXzDx2CnBw4elSu32+3S7GK4GC5dHp9vdQU8PGB5cvhqaekaN6iRVImddUquSx5To5c
+      3jwkRK71HxQk+6qvl0uV5+RAT49Uk8nI8PS7c23QAAyhoUGu9+/tDd3dUh2mslLWjx2DZ5+V
+      iizbtsHtt8PGjXDffXIt/VdekQ7s4yOd+ac/lX2lp8OWLVJh0uWC06fhj3+UQhV5eXD8uNQW
+      Dg2Va/nHxEgN4fnzpeBGXp4UzNAAfD70FGgIy5fD2LHSCc+ckdumToWXXpJOHxkpNYL7+qRo
+      hq+vdGyQjh4aKredPSu3bd0q2x48KMUw2ttl3WKRzj5+vHTstDSpMeZySeGL/HwoLZWiFrt3
+      f7JAhvrv6e8Bhtmf/ywlk9askTBcjXXr4NvflqOIGh4aAGU0PQUaBsXFsHOn1Ok6fVqKzLmd
+      Pw+7dsnpz8eXm5svjwvc9brU8NMAXCWnc+j7+/uhqEiWL1yQInm/+93laownTkhhugcfHLz8
+      s5/Bz38OO3ZcLsLn1tDw+b8OJTQAV+GFF6QMaUeHrL/6qlSE3LZNOj7IoHb6dPjVr2QKs61N
+      BrKJiXJ/RoY8Ljd38HJYmOzj3Xdlxmj3btm+s1OOJu+8IzNEhw/DBx/A22/LlClIKB99VJ7n
+      Jz+BxkYZezz9tATvqafgu9+VQbjLJY9zOuVIdfGirL/2mlSP3L1bnuPoUTlClZbK35aWEX2r
+      R4xOg14FPz/p0EFBsp6ZKR0jLU1miVJS5HuD9HRZLy2VmaDERPmuoL1d5viXLoUXX4QxYy4v
+      b9okdYFDQ6UjumeOLBbZv8slz+10Sl3h8HAJB0hw3N9DxMbKdwZ2uzzWXVP4a1+T9vT2yjRq
+      V5cE5vx5uT8jQ16ft7c831/+IgWzGxvl9RQUeOY9H246CL4K585Jx87NlfWGBuk09fVSCNvL
+      Szrq8eNye1aWHCE6O2HCBOmA4eEyLpg8WT593csWi3xPkJwsYZk8WTojSGd2fxfR1SW1it2s
+      VgnF/v3yHB0d0oagIOnc3d0yxRoYKF+iBQbKNp2dcOmSTPG6axynpUlALBZpQ2ysPHdqqtx2
+      LdIAKKPpGEAZTQOgjKYBUEbTACijaQCU0TQAymgaAGU0DYAymgZAGU0DoIymAVBG0wAoo13x
+      36GLPNMKpTxE6wQro11xBFjjkUYo5Sn6ewBlNB0EK6NpAJTRNADKaBoAZTQNgDKaBkAZTQOg
+      jKYBUEbTACijaQCU0TQAymgaAGU0DcAQjh2Ta+gfPXr5+v9ur78u19vfu1fqf/3zn5fv27Fj
+      8PYvvih/N2+WK0Lv3//pz+fezu3ZZ6Umwb8rynHyJFRXX80rUlfS+gBD2LtXLi/e1yfX3E9N
+      hR/+UK6bf/y4FJ3Iz5davwUFUlUyOhrKy6U6TGWllD5y6+6GH/wAHn8cVq+GpCQpZDF/vlR+
+      DAmBO+6Q0qtLl8K+fXJZ8uhoKWCRny8F93JzpUjG/PlyCfR9+6RNnZ1yifVvflPKqaameuiN
+      +xLRI8AQliyRCo3BwdLJOjvl2vytrZCdDXPmXN62u1s6cEeH1AoYNUrKobrLqwIsXCjFKFpb
+      oa5O6gpMmQIzZ0oRCm9vKXSxdevlx/zoR3KN/uZmSEiQgtoWizzeXURjzhw5SriLesfHS5vV
+      Z9PfAwzB6ZQKKS6XdM5Ro+QT2GaTai9paVIUo7JSqr2UlUkBjMBAeVxnp5Q+Arnf5ZKCGSkp
+      cvoSESFHltGj4cgRCcelS/I3NVWOJBkZUjTPbpfnra2V2sXl5RKanh4JaWen1C8uKZHyTJGR
+      125Ri8+TBkAZTU+BlNE0AJ+zpiaZFcrNleqRd90l/2pr5f7XXpMB8EMPwZ49MG2aPOaJJ2Dl
+      SjmF+de/PPoSjKKzQFehuBi2bJE6wF5e8Pe/w1e+IgNdd5G8mBgZuB4+LOOBiROleN3OnbBs
+      GSxeLAPlEydgxgwYP1723dYmj9+8Wc75MzLkXL+zU2aKZs2Sc3r3jFRnp+w/KUnGKuvXy8zP
+      tm0yeC8tlXYFB8vYo65O7s/Lk/1fOUPU1CRjjNJSaUdW1gi/uR6iAbgKW7fChg0yFWq1ysC2
+      ulqqMNbWyuAW4OWX4d57ZfqyoUG2TU2VqdNdu2S25he/GLzv1avl6NDTI0eFXbskABaLzDiV
+      lcnA1um8/O/SJQlAe7sMit1hiImRqVmXS6ZJ/fykjYcPy21Wq8xarV0rgWhtlcfdfbe0Nztb
+      6g5PnSqBuP56WY6KGul3fPj5rFmzZs3l1Sc81pAvg7Aw6cg33CDrzc0y9VlVJdOX7rKmp07J
+      J31UlHTS3l5YtEg6dWiofDJXVEiN4fZ22b6wUDr/ggWy3dKlMpvklpgo+/fyklKqUVHSka1W
+      qQXscMj0Z2ysTI+mpcmnf3Ky3J6RIX+tVtlHY6Nsm5gowYqOllmusDBZBpl2tdnkKGazjehb
+      PWJ0FkgZTQfBymgaAGU0DYAymgZAGU0DoIymAVBG0wAoo2kAlNH+F2Y8oReg3JGZAAAAAElF
+      TkSuQmCC
+    </thumbnail>
+    <thumbnail height='92' name='TDs' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAABcCAYAAAA4eLo/AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAABK0lEQVR4nO3XIRLCQBBFQaDiOEHux+GjI7CLTzwjXrdc9c2rqX2utdYDol7TA2CSAEgT
+      AGnb9eE4vxM7YIQLQJoASBMAabc/wNX+ef9jB4xwAUgTAGkCIE0ApAmANAGQJgDSBECaAEgT
+      AGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQ
+      JgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkC
+      IE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDS
+      BECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIO0HPNsIEF5EH2UAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='70' name='YDs' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAABGCAYAAACaNZvCAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAA40lEQVR4nO3VsRGAMAwEQczQfyMUKUpwhoPbjRV8cqM1M3NB1H16AJwkANIEQJoASBMA
+      aQIgTQCkPbuDd60/dsARPgBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRA
+      mgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJ
+      gDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBI
+      EwBpAiBNAKQJgDQBkPYBjF8FN1CdTX4AAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
