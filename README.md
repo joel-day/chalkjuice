@@ -1,6 +1,6 @@
 # ChalkJuice
 
-chalkjuice.com 
+[Use the Model](chalkjuice.com)
 
 # Barry - NFL Game Prediction Model 
 
