@@ -1,5 +1,5 @@
 [project]
-name = "package_1"
+name = "lambda"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -12,9 +12,9 @@ dependencies = [
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-# Tell Hatchling to include the package_1 folder as a package
+# Tell Hatchling to include the lambda folder as a package
 [tool.hatch.build]
-include = ["packages/package_1"]
+include = ["packages/lambda"]
 
 # manage the environment like a package rather than a standalone virtual environment
 [tool.uv]
