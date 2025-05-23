@@ -1,5 +1,7 @@
 # ChalkJuice
 
+www.chalkjuice.com 
+
 # Barry - NFL Game Prediction Model 
 
 Barry uses Machine Learning and a dataset of all previous NFL matchups to predict the amount of times a team will win against the provided opponent. 
