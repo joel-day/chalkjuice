@@ -1,1 +1,1 @@
-# chalkland
+# Notebooks for working through code and creating helper functions before creating .py files for lambda
