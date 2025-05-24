@@ -13,7 +13,7 @@ import os
 # Initialize Athena Client
 AWS_REGION = "us-east-2"  # Change to your region
 athena = boto3.client("athena", region_name=AWS_REGION)
-ATHENA_DATABASE = "chalk"
+ATHENA_DATABASE = "nfl"
 ATHENA_TABLE = "chalkjuice_data"
 ATHENA_OUTPUT_BUCKET = "s3://chalkjuice/golden_athena/"  # Replace with your actual S3 bucket
 
@@ -157,14 +157,18 @@ def send_chunk(connection_id, message):
 CHUNK_SIZE = 50  # Number of rows per JSON chunk
 
 def lambda_handler(event, context):
-    print("Received event:", json.dumps(event, indent=2))
-
     connection_id = event["requestContext"]["connectionId"]
-    print(connection_id)
-
     body = json.loads(event["body"])
     query = body.get('query')
-    print(f"SQL Query: {query}")
+
+
+
+
+
+
+
+
+
 
     df = get_df_try_hash(query)
 
@@ -172,11 +176,10 @@ def lambda_handler(event, context):
     df.to_csv(csv_buffer, index=False)  # Save without index
     csv_buffer.seek(0)
     csv_reader = csv.reader(csv_buffer)
-    print(csv_reader)
 
-    headers = next(csv_reader)  # Extract headers from the first row
 
     # Send headers separately
+    headers = next(csv_reader)  # Extract headers from the first row
     send_chunk(connection_id, {"label": "headers", "data": headers})
 
     filtered_rows = list(itertools.islice(csv_reader, None))

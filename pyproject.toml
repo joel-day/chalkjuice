@@ -8,12 +8,13 @@ readme = "README.md"            # Path to your project's README file
 requires-python = ">=3.10"      # Minimum Python version required
 dependencies = [
     "boto3==1.34.75",           # AWS SDK for Python (interacts with AWS services)
-    "awscli==1.32.75",
+    "awscli==1.32.75",          # Run commands like aws configure in the terminal
     "ipykernel==6.29.5",        # Jupyter kernel support (to run notebooks)
     "pip==25.0",                # Ensures a minimum pip version
     "pydantic==2.10.6",         # Data validation and serialization library
     "python-dotenv==1.1.0",     # Loads environment variables from `.env` files
     "numpy>=1.26.0",            # Core package for numerical computations
+    "pyarrow==15.0.2",          # Required for reading/writing Parquet files
     "pandas==2.2.2",            # Data analysis and manipulation library
     "pymongo==4.11.3",          # MongoDB driver for synchronous access
     "scikit-learn>1.1.3",       # Machine learning library
