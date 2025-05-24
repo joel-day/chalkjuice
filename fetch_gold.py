@@ -163,13 +163,6 @@ def lambda_handler(event, context):
 
 
 
-
-
-
-
-
-
-
     df = get_df_try_hash(query)
 
     csv_buffer = io.StringIO()
