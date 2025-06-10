@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Retrieves data to fill the Historical Matchups table upon page load
     const message = {
       action: "fetch_gold",  // WebSocket route name needs custom integration request
-      query: "SELECT * FROM chalkjuice_data WHERE season = 2023;"
+      query: 'SELECT * FROM "nfl"."nfl_games_all" WHERE season = 2023;'
     };
     socket.send(JSON.stringify(message));
 
@@ -203,12 +203,16 @@ document.addEventListener("DOMContentLoaded", async () => {
   function refresh_historical_matchups_table(selectedYear, selectedTeam) {
     clearTable("data-table5"); // Clear the table before sending the new request
 
-    let query = `SELECT * FROM chalkjuice_data WHERE season = ${selectedYear}`;
+    let query = `SELECT * FROM "nfl"."nfl_games_all" WHERE season = ${selectedYear}`;
     
     // If a specific team is selected, add the team filter to the query
     if (selectedTeam !== "ALL") {
-      query += ` AND team = '${selectedTeam}'`;
+      query += ` AND team = '${selectedTeam}';`;
     }
+    else {
+      query += `;`;
+    }
+
 
     const message = {
       action: "fetch_gold",  // WebSocket route name (same as the action upon page load to fill the table)
@@ -217,6 +221,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     sendMessage(message, socket);
   }
+
+
+
 
   document.getElementById("year-select").addEventListener("change", function () {
 

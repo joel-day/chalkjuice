@@ -26,7 +26,8 @@ dependencies = [
     "flake8-pyproject==1.2.3",  # Enables config using pyproject.toml
     "transformers==4.40.1",     # State-of-the-art NLP library by Hugging Face
     "torch==2.2.2",             # PyTorch deep learning library
-    "GPUtil==1.4.0"             # GPU utility library to get GPU status
+    "GPUtil==1.4.0",            # GPU utility library to get GPU status
+    "docker==7.0.0"             # SDK to interact with the Docker Engine
 ]
 
 
