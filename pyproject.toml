@@ -79,8 +79,8 @@ exclude = [
 
 
 # Custom CLI commands
-# [project.scripts]
-# test = "models.whisper_turbo_base_mlx:run_whisper"
+[project.scripts]
+wv = "packages.helpers.wv:get_website_vistor_counts"
 
 
 # NOTES:
