@@ -80,7 +80,7 @@ exclude = [
 
 # Custom CLI commands
 [project.scripts]
-wv = "packages.helpers.wv:get_website_vistor_counts"
+wv = "packages.helpers.wv:get_website_visitor_counts"
 
 
 # NOTES:

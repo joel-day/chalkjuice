@@ -13,6 +13,11 @@ import docker
 import zlib
 import json  
 import csv
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.image import MIMEImage
+from email.mime.base import MIMEBase
+from email import encoders
 
 class joel_boto:
     def __init__(self, api_gateway_endpoint=None):
@@ -55,6 +60,8 @@ class joel_boto:
         self.ecr_login()
 
         self.lambda_client = boto3.client("lambda")
+
+        self.ses = boto3.client('ses')
 
         self.iam = boto3.client("iam")
 
@@ -180,7 +187,49 @@ class joel_boto:
 
         return df
     
-    
+# SES #################################
+    def send_email(self, sender_email, sender_name, recipient_email, subject, body_text, png = None):
+        
+        try:
+            msg = MIMEMultipart('related')
+            msg['Subject'] = subject
+            msg['From'] = f'{sender_name} <{sender_email}>'
+            msg['To'] = recipient_email
+        
+            # Create the HTML body with line breaks
+            body_html = """<html>
+                <head></head>
+                <body>
+                <p><strong>{}</strong></p>
+                </body>
+                </html>""".format(body_text.replace('\n', '<br>'))
+
+            # Attach the body in HTML format
+            msg.attach(MIMEText(body_html, 'html'))
+            
+            if png:
+                # Download the most recent image
+                attachment = MIMEBase('application', 'octet-stream')
+                attachment.set_payload(png)
+                encoders.encode_base64(attachment)
+                attachment.add_header('Content-Disposition', f'attachment; filename="{os.path.basename(latest_image_key)}"')
+                msg.attach(attachment)
+
+
+            # Send the email
+            response = self.ses.send_raw_email(
+                Source=sender_email,
+                Destinations=[recipient_email],
+                RawMessage={'Data': msg.as_string()}
+            )
+        
+            print("Email sent! Message ID:", response['MessageId'])
+
+        except Exception as e:
+            print('Error sending email:', str(e))
+            
+        return ('email sent')
+
 # Athena #################################
     def query_athena(self, query, athena_database, athena_output_location):
         response = self.athena.start_query_execution(
