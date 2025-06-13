@@ -2,7 +2,7 @@
 
 reduce to only teams by year 
 
-create dictionary of oldest game available and handle on front end with json
+create dictionary of oldest game available and create dynamodb table
 
 combine create feaures and collect df
 
