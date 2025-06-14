@@ -63,6 +63,8 @@ class joel_boto:
 
         self.ses = boto3.client('ses')
 
+        self.apigw = boto3.client('apigatewayv2')
+
         self.iam = boto3.client("iam")
 
         print("✅ Connected to all clients successfully.")
@@ -390,6 +392,7 @@ class joel_boto:
             print("Error describing repository:", str(e))
 
     def build_and_push_to_ECR(self, path_docker, repo_uri):
+        os.environ.pop("DOCKER_HOST", None)
         client = docker.from_env()
 
         # Build image with the same tag name as the ECR URI

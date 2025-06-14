@@ -6,7 +6,7 @@ document.querySelector('html').classList.add('no-scroll');
 
 // brand-new WebSocket object each time. Must reload the handlers. 
 // i use the heartbeat functions to keep it open to avoid having to reopen
-const socket = new WebSocket("wss://0t9yhsvorj.execute-api.us-east-2.amazonaws.com/production/");
+const socket = new WebSocket("wss://7aqddsnx56.execute-api.us-east-2.amazonaws.com/prod/");
 
   
 //definitions---------------------------------------------------------------------------------------------------------------
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     
     // Retrieves data to fill the Historical Matchups table upon page load
     const message = {
-      action: "fetch_gold",  // WebSocket route name needs custom integration request
+      action: "nfl_all_games",  // WebSocket route name needs custom integration request
       query: 'SELECT * FROM "nfl"."nfl_games_all" WHERE season = 2023;'
     };
     socket.send(JSON.stringify(message));
@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
     const message = {
-      action: "fetch_gold",  // WebSocket route name (same as the action upon page load to fill the table)
+      action: "nfl_all_games",  // WebSocket route name (same as the action upon page load to fill the table)
       query: query
     };
 
@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   function barry_model_results(team, opp, week1, week2, season1, season2) {
     
     const message = {
-      action: "fetch_model",  // WebSocket route name
+      action: "nfl_matchups_model",  // WebSocket route name
       team: team,
       opponent: opp,
       week1: week1,
