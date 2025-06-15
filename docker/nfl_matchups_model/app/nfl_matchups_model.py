@@ -5,7 +5,7 @@ from datetime import datetime
 import numpy as np
 from sklearn.preprocessing import StandardScaler
 from helpers import joel_boto
-jb = joel_boto(api_gateway_endpoint="https://0t9yhsvorj.execute-api.us-east-2.amazonaws.com/production")
+jb = joel_boto(api_gateway_endpoint="https://7aqddsnx56.execute-api.us-east-2.amazonaws.com/prod/")
 
 
 # AWS Credentials & Region

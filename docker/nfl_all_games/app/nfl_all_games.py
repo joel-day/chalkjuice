@@ -4,7 +4,7 @@ from helpers import joel_boto
 from helpers import chalkjuice_helpers as ch
 import re
 
-jb = joel_boto(api_gateway_endpoint="wss://7aqddsnx56.execute-api.us-east-2.amazonaws.com/prod/")
+jb = joel_boto(api_gateway_endpoint="https://7aqddsnx56.execute-api.us-east-2.amazonaws.com/prod/")
 
 dynamodb_table = "nfl_games_all"
 partition_key = "query_hash"

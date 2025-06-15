@@ -78,7 +78,6 @@ class joel_boto:
             )
             print("✅ Logged in to api_gateway successfully.")
 
-
 # API Gateway ###########################     
     def send_df_to_frontend_in_chunks(self, df, connection_id, chunk_size, labels):
         """
@@ -119,6 +118,26 @@ class joel_boto:
                 Data=json.dumps({"label": label3, "data": chunk}).encode("utf-8")
             )
 
+    def create_routes_and_integrations(self, lambda_routes, api_id):
+        # STEP 2: Create routes and integrations
+        for route_key, lambda_arn in lambda_routes.items():
+            # Create integration
+            integration = self.apigw.create_integration(
+                ApiId=api_id,
+                IntegrationType='AWS_PROXY',
+                IntegrationUri=f'arn:aws:apigateway:{self.region}:lambda:path/2015-03-31/functions/{lambda_arn}/invocations'
+            )
+
+            integration_id = integration['IntegrationId']
+            
+            # Create route
+            self.apigw.create_route(
+                ApiId=api_id,
+                RouteKey=route_key,
+                Target=f'integrations/{integration_id}'
+            )
+            print(f"Connected route '{route_key}' to Lambda")
+
 # Lambda ####################################
     def create_lambda_function(self, lamdba_fxn_name, role_arn, repo_image_uri, timeout=300, memorysize=512):
         try:
@@ -145,6 +164,33 @@ class joel_boto:
         )
 
         print("✅ Lambda updated:", response["LastModified"])
+
+    def list_active_lambdas(self):
+        
+        paginator = self.lambda_client.get_paginator('list_functions')
+
+        print("Listing Lambda functions and ARNs:")
+
+        for page in paginator.paginate():
+            for function in page['Functions']:
+                print(f"Name: {function['FunctionName']}, ARN: {function['FunctionArn']}")
+
+    def create_lambda_permissions(self, lambda_routes, api_id, api_name):
+        # Step 5: Add Lambda permissions for API Gateway to invoke the Lambdas
+        for lambda_arn in lambda_routes.values():
+            fn_name = lambda_arn.split(':')[-1]
+            statement_id = f'{api_name}-{fn_name}-invoke'
+            try:
+                self.lambda_client.add_permission(
+                    FunctionName=fn_name,
+                    StatementId=statement_id,
+                    Action='lambda:InvokeFunction',
+                    Principal='apigateway.amazonaws.com',
+                    SourceArn=f'arn:aws:execute-api:{self.region}:{self.account_id}:{api_id}/*'
+                )
+                print(f"Added permission for Lambda function {fn_name} to be invoked by API Gateway.")
+            except self.lambda_client.exceptions.ResourceConflictException:
+                print(f"Permission {statement_id} already exists, skipping.")
 
 # S3 ####################################
     def s3_bucket_exists(self, bucket_name: str) -> bool:
@@ -392,7 +438,7 @@ class joel_boto:
             print("Error describing repository:", str(e))
 
     def build_and_push_to_ECR(self, path_docker, repo_uri):
-        os.environ.pop("DOCKER_HOST", None)
+
         client = docker.from_env()
 
         # Build image with the same tag name as the ECR URI
