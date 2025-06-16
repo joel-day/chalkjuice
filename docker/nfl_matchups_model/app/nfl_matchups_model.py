@@ -53,6 +53,9 @@ def model_output(team, opponent, points_team1, points_team2):
     team1_wins = 0
     team2_wins = 0
 
+    if team == opponent:
+        opponent = team + '2'
+
     # Create an empty DataFrame to store results
     df = pd.DataFrame(columns=[f"{team} Points", f"{opponent} Points", "Winner"])
     while n < limit:
