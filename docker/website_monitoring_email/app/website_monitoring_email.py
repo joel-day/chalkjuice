@@ -64,19 +64,15 @@ def lambda_handler(event, context):
 
     # Define the sender email and display name
     sender_email = "dosbowl@chalkjuice.com"
-    sender_name = "Website Visitors"  # Change this to your desired display name
+    sender_name = "Chalkjuice.com Info"  # Change this to your desired display name
     recipient_email = 'joelday.business@gmail.com'
-    subject = 'chalkjuice.com'
+    subject = '📈 Website Visitor Summary 📉'
     body_text = (
-        f"📊 Website Visitor Summary:\n\n"
-        f"Total Unique Visitors: {results['total_unique_visitors']}\n"
-        f"Total Requests: {results['total_requests']}\n\n"
-        f"🕒 Last 24 Hours:\n"
-        f"- Unique Visitors: {results['unique_visitors_24h']}\n\n"
-        f"📅 Last 7 Days:\n"
-        f"- Unique Visitors: {results['unique_visitors_7d']}\n\n"
-        f"🗓️ Last 30 Days:\n"
-        f"- Unique Visitors: {results['unique_visitors_30d']}"
+        f"𓀅 Total Unique Visitors 𓀛: {results['total_unique_visitors']}\n\n"
+        f"Last 24 Hours: {results['unique_visitors_24h']}\n"
+        f"Last 7 Days: {results['unique_visitors_7d']}\n"
+        f"Last 30 Days: {results['unique_visitors_30d']}\n\n"
+        f"Total Requests: {results['total_requests']}"
     )
 
 
