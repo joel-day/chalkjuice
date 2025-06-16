@@ -1,0 +1,26 @@
+name: Daily Lambda Trigger
+
+on:
+  schedule:
+    - cron: '0 11 * * *'  # Runs every day at 4 AM Pacific (UTC-7 is 11 AM UTC)
+  workflow_dispatch:      # Optional: lets you trigger it manually from the UI
+
+jobs:
+  invoke-lambda:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_REGION }}
+
+    - name: Invoke Lambda function
+      run: |
+        aws lambda invoke \
+          --function-name website_monitoring_email \
+          --invocation-type Event \
+          --payload '{}' \
+          response.json
