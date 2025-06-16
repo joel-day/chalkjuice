@@ -8,7 +8,44 @@ document.querySelector('html').classList.add('no-scroll');
 // i use the heartbeat functions to keep it open to avoid having to reopen
 const socket = new WebSocket("wss://7aqddsnx56.execute-api.us-east-2.amazonaws.com/prod/");
 
-  
+
+const oldest_year = {
+  'ARI': '1970',
+  'ATL': '1970',
+  'BAL': '1970',
+  'BUF': '1970',
+  'CAR': '1998',
+  'CHI': '1970',
+  'CIN': '1971',
+  'CLE': '2002',
+  'DAL': '1970',
+  'DEN': '1970',
+  'DET': '1970',
+  'GNB': '1970',
+  'HOU': '2005',
+  'IND': '1970',
+  'JAX': '1998',
+  'KAN': '1970',
+  'LAC': '1970',
+  'LAR': '1970',
+  'LVR': '1970',
+  'MIA': '1970',
+  'MIN': '1970',
+  'NOR': '1970',
+  'NWE': '1970',
+  'NYG': '1970',
+  'NYJ': '1970',
+  'PHI': '1970',
+  'PIT': '1970',
+  'SEA': '1979',
+  'SFO': '1970',
+  'TAM': '1979',
+  'TEN': '1970',
+  'WAS': '1970'
+};
+
+
+
 //definitions---------------------------------------------------------------------------------------------------------------
 
 // this adds an error messege when the team data isnt availble
@@ -222,9 +259,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     sendMessage(message, socket);
   }
 
-
-
-
   document.getElementById("year-select").addEventListener("change", function () {
 
     // generates laoding image, hides the table wrapper and header while laoding data
@@ -244,14 +278,12 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   // Function to retrieve model results (df with 100 matchups, win percentage)
-  function barry_model_results(team, opp, week1, week2, season1, season2) {
+  function barry_model_results(team, opp, season1, season2) {
     
     const message = {
       action: "nfl_matchups_model",  // WebSocket route name
       team: team,
       opponent: opp,
-      week1: week1,
-      week2: week2,
       season1: season1,
       season2: season2
     };
@@ -310,8 +342,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     barry_model_results(
       document.getElementById("model_team").value,
       document.getElementById("model_opponent").value,
-      document.getElementById("model_week1").value,
-      document.getElementById("model_week2").value,
       document.getElementById("model_season1").value,
       document.getElementById("model_season2").value
     );
@@ -319,6 +349,45 @@ document.addEventListener("DOMContentLoaded", async () => {
   
     clearTable("data-table6");
   });
+
+
+  const modelTeam = document.getElementById("model_team");
+  const modelSeason1 = document.getElementById("model_season1");
+  const modelOpponent = document.getElementById("model_opponent");
+  const modelSeason2 = document.getElementById("model_season2");
+
+  function updateYearOptions(teamCode, dropdown) {
+
+      const oldest = parseInt(oldest_year[teamCode]);
+
+      dropdown.innerHTML = ''; // Clear current options
+
+      for (let year = 2023; year >= oldest; year--) {
+          const option = document.createElement("option");
+          option.value = year;
+          option.textContent = year;
+          dropdown.appendChild(option);
+      }
+  }
+
+  // Initial load
+  updateYearOptions(modelTeam.value, modelSeason1);
+
+  // Update on team change
+  modelTeam.addEventListener("change", () => {
+      updateYearOptions(modelTeam.value, modelSeason1);
+  });
+
+    // Initial load
+  updateYearOptions(modelOpponent.value, modelSeason2);
+
+  // Update on team change
+  modelOpponent.addEventListener("change", () => {
+      updateYearOptions(modelOpponent.value, modelSeason2);
+  });
+
+
+
 
   document.getElementById("popup-link").addEventListener("click", function(event) {
     event.preventDefault();

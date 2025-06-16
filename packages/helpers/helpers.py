@@ -291,7 +291,7 @@ class joel_boto:
         while True:
             status = self.athena.get_query_execution(QueryExecutionId=query_execution_id)['QueryExecution']['Status']['State']
             if status in ['SUCCEEDED', 'FAILED', 'CANCELLED']:
-                print(f"Query finished with status: {status}")
+                #print(f"Query finished with status: {status}")
                 break
             time.sleep(1)
 
@@ -315,7 +315,7 @@ class joel_boto:
         # Convert to Pandas DataFrame
         df = pd.DataFrame(rows, columns=columns)
         df = df.fillna("NA")
-        df.columns = df.columns.str.replace('_', ' ').str.title()
+        #df.columns = df.columns.str.replace('_', ' ').str.title()
 
         return df
 
